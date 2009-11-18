@@ -9,6 +9,11 @@
   <sdef n="pr"/>
   <sdef n="sg"/>
   <sdef n="pl"/>
+  <sdef n="prn"/>
+  <sdef n="abs"    c="Absolutive" />
+  <sdef n="ergpos" c="Ergative (Postposed)" />
+  <sdef n="ergpre" c="Ergative (Preposed)" />
+  <sdef n="obl"    c="Oblique" />
  </sdefs>
  <pardefs>
   <pardef n="mga__part"> 
@@ -27,22 +32,108 @@
    <e><p><l/><r><s n="pr"/></r></p></e>         
   </pardef>
 
-  <pardef n="iro__n"> <!-- dog /-->
+  <pardef n="iro__n"> <!-- dog -->
    <e><p><l/><r><s n="n"/><s n="sg"/></r></p></e> 
   </pardef>
- </pardefs>
+  <pardef n="Dios__np"> 
+   <e><p><l/><r><s n="np"/><s n="al"/><s n="sg"/></r></p></e>
+  </pardef> 
+  
+  <pardef n="ako__prn">
+   <e><p><l/><r><s n="prn"/><s n="p1"/><s n="sg"/><s n="abs"/></r></p></e>
+   <e><p><l/><r><s n="prn"/><s n="p1"/><s n="sg"/><s n="ergpre"/></r></p></e>
+  </pardef>
+  <pardef n="ko__prn">
+   <e><p><l/><r><s n="prn"/><s n="p1"/><s n="sg"/><s n="abs"/></r></p></e>
+   <e><p><l/><r><s n="prn"/><s n="p1"/><s n="sg"/><s n="ergpos"/></r></p></e>
+  </pardef>
+
+  <pardef n="ikaw__prn">
+   <e><p><l/><r><s n="prn"/><s n="p2"/><s n="sg"/><s n="abs"/></r></p></e>
+  </pardef>
+  <pardef n="siya__prn">
+   <e><p><l/><r><s n="prn"/><s n="p3"/><s n="sg"/><s n="abs"/></r></p></e>
+  </pardef>
+  <pardef n="kita__prn">
+   <e><p><l/><r><s n="prn"/><s n="p1i"/><s n="pl"/><s n="abs"/></r></p></e>
+  </pardef>
+  <pardef n="kami__prn">
+   <e><p><l/><r><s n="prn"/><s n="p1x"/><s n="pl"/><s n="abs"/></r></p></e>
+  </pardef>
+  <pardef n="kamo__prn">
+   <e><p><l/><r><s n="prn"/><s n="p2"/><s n="pl"/><s n="abs"/></r></p></e>
+  </pardef>
+  <pardef n="sila__prn">
+   <e><p><l/><r><s n="prn"/><s n="p3"/><s n="pl"/><s n="abs"/></r></p></e>
+  </pardef>
+  
+  <pardef n="nako__prn">
+   <e><p><l/><r><s n="prn"/><s n="p1"/><s n="sg"/><s n="abs"/></r></p></e>
+  </pardef>
+  <pardef n="nimo__prn">
+   <e><p><l/><r><s n="prn"/><s n="p2"/><s n="sg"/><s n="ergpos"/></r></p></e>
+  </pardef>
+  <pardef n="niya__prn">
+   <e><p><l/><r><s n="prn"/><s n="p3"/><s n="sg"/><s n="ergpos"/></r></p></e>
+  </pardef>
+  <pardef n="nato__prn">
+   <e><p><l/><r><s n="prn"/><s n="p1i"/><s n="pl"/><s n="ergpos"/></r></p></e>
+  </pardef>
+  <pardef n="namo__prn">
+   <e><p><l/><r><s n="prn"/><s n="p1x"/><s n="pl"/><s n="ergpos"/></r></p></e>
+  </pardef>
+  <pardef n="ninyo__prn">
+   <e><p><l/><r><s n="prn"/><s n="p2"/><s n="pl"/><s n="ergpos"/></r></p></e>
+  </pardef>
+  <pardef n="nila__prn">
+   <e><p><l/><r><s n="prn"/><s n="p3"/><s n="pl"/><s n="ergpos"/></r></p></e>
+  </pardef>
+
+  <pardef n="akoa__prn">
+   <e><p><l/><r><s n="prn"/><s n="p1"/><s n="sg"/><s n="ergpre"/></r></p></e>
+  </pardef>
+  <pardef n="imo__prn">
+   <e><p><l/><r><s n="prn"/><s n="p2"/><s n="sg"/><s n="ergpre"/></r></p></e>
+  </pardef>
+  <pardef n="iya__prn">
+   <e><p><l/><r><s n="prn"/><s n="p3"/><s n="sg"/><s n="ergpre"/></r></p></e>
+  </pardef>
+  <pardef n="ato__prn">
+   <e><p><l/><r><s n="prn"/><s n="p1i"/><s n="pl"/><s n="ergpre"/></r></p></e>
+  </pardef>
+  <pardef n="amo__prn">
+   <e><p><l/><r><s n="prn"/><s n="p1x"/><s n="pl"/><s n="ergpre"/></r></p></e>
+  </pardef>
+  <pardef n="inyo__prn">
+   <e><p><l/><r><s n="prn"/><s n="p2"/><s n="pl"/><s n="ergpre"/></r></p></e>
+  </pardef>
+  <pardef n="ila__prn">
+   <e><p><l/><r><s n="prn"/><s n="p3"/><s n="pl"/><s n="ergpre"/></r></p></e>
+  </pardef>
+</pardefs>
+ 
  <section id="main" type="standard">
+  <!-- Particles -->
   <e lm="mga"><i>mga</i><par n="mga__part"/></e>
 
+  <!-- Conjunctions -->
   <e lm="ug"><i>ug</i><par n="ug__cnjcoo"/></e>
   <e lm="tungod"><i>tungod</i><par n="tungod__cnjsub"/></e>
-
+  
+  <!-- Prepositions -->
   <e lm="sa"><i>sa</i><par n="sa__pr"/></e>
   <e lm="nga"><i>nga</i><par n="sa__pr"/></e> <!-- ? -->
-
+  
+  <!-- Nouns -->
   <e lm="iro"><i>iro</i><par n="iro__n"/></e>
   <e lm="lalaki"><i>lalaki</i><par n="iro__n"/></e>
   <e lm="langit"><i>langit</i><par n="iro__n"/></e>
   <e lm="yuta"><i>yuta</i><par n="iro__n"/></e>
+
+  <!-- Pronouns -->
+    
+
+  <!-- Proper Nouns -->
+  <e lm="Dios"><i>Dios</i><par n="Dios__np"/></e>
  </section>
 </dictionary>

@@ -33,10 +33,11 @@
   <pardef n="aso__n"> <!-- dog /-->
    <e><p><l/><r><s n="n"/><s n="sg"/></r></p></e> 
   </pardef>
-  <pardef n="Wikipedia__np">
+  <pardef n="Dios__np">
    <e><p><l/><r><s n="np"/><s n="al"/><s n="sg"/></r></p></e> 
   </pardef>
  </pardefs>
+ 
  <section id="main" type="standard">
   <!-- Particles -->
   <e lm="mga"><i>mga</i><par n="mga__part"/></e>
@@ -64,7 +65,7 @@
   <e lm="lupa"><i>lupa</i><par n="aso__n"/></e>
 
   <!-- Proper nouns -->
-  <e lm="Wikipedia"><i>Wikipedia</i><par n="Wikipedia__np"/></e>
-  <e lm="Dios"><i>Dios</i><par n="Wikipedia__np"/></e>
+  <e lm="Wikipedia"><i>Wikipedia</i><par n="Dios__np"/></e>
+  <e lm="Dios"><i>Dios</i><par n="Dios__np"/></e>
  </section>
 </dictionary>
