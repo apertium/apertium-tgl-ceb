@@ -89,6 +89,19 @@
   <!-- Particles -->
   <e lm="mga"><i>mga</i><par n="mga__part"/></e>
 
+  <e lm="ba"><i>ba</i><par n="mga__part"/></e>
+  <e lm="na"><i>na</i><par n="mga__part"/></e>
+  <e lm="pa"><i>pa</i><par n="mga__part"/></e>
+
+  <e lm="ho"><i>ho</i><par n="mga__part"/></e>
+  <e lm="po"><i>po</i><par n="mga__part"/></e>
+
+  <e lm="kasi"><i>kasi</i><par n="mga__part"/></e>
+  <e lm="lamang"><i>lamang</i><par n="mga__part"/></e>
+  <e lm="man"><i>man</i><par n="mga__part"/></e>
+  <e lm="din"><i>din</i><par n="mga__part"/></e>
+
+
   <!-- Conjunctions -->
   <e lm="at"><i>at</i><par n="at__cnjcoo"/></e>
   <e lm="o"><i>o</i><par n="at__cnjcoo"/></e>

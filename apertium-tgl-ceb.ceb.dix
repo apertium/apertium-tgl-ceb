@@ -154,6 +154,14 @@
  <section id="main" type="standard">
   <!-- Particles -->
   <e lm="mga"><i>mga</i><par n="mga__part"/></e>
+  <e lm="ba"><i>ba</i><par n="mga__part"/></e>
+  <e lm="gyud"><i>gyud</i><par n="mga__part"/></e>
+  <e lm="kay"><i>kay</i><par n="mga__part"/></e>
+  <e lm="lang"><i>lang</i><par n="mga__part"/></e>
+  <e lm="man"><i>man</i><par n="mga__part"/></e>
+  <e lm="na"><i>na</i><par n="mga__part"/></e>
+  <e lm="pa"><i>pa</i><par n="mga__part"/></e>
+  <e lm="usab"><i>usab</i><par n="mga__part"/></e>
 
   <!-- Conjunctions -->
   <e lm="ug"><i>ug</i><par n="ug__cnjcoo"/></e>
