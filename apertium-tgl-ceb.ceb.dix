@@ -10,9 +10,15 @@
   <sdef n="sg"/>
   <sdef n="pl"/>
   <sdef n="prn"/>
+  <sdef n="p1"/>
+  <sdef n="p1i"/>
+  <sdef n="p1x"/>
+  <sdef n="p2"/>
+  <sdef n="p3"/>
+
   <sdef n="abs"    c="Absolutive" />
-  <sdef n="ergpos" c="Ergative (Postposed)" />
-  <sdef n="ergpre" c="Ergative (Preposed)" />
+  <sdef n="ergp" c="Ergative (Postposed)" />
+  <sdef n="erg" c="Ergative (Preposed)" />
   <sdef n="obl"    c="Oblique" />
  </sdefs>
  <pardefs>
@@ -35,19 +41,28 @@
   <pardef n="iro__n"> <!-- dog -->
    <e><p><l/><r><s n="n"/><s n="sg"/></r></p></e> 
   </pardef>
+
+  <!-- Proper nouns -->
   <pardef n="Dios__np"> 
    <e><p><l/><r><s n="np"/><s n="al"/><s n="sg"/></r></p></e>
   </pardef> 
-  
-  <pardef n="ako__prn">
-   <e><p><l/><r><s n="prn"/><s n="p1"/><s n="sg"/><s n="abs"/></r></p></e>
-   <e><p><l/><r><s n="prn"/><s n="p1"/><s n="sg"/><s n="ergpre"/></r></p></e>
-  </pardef>
-  <pardef n="ko__prn">
-   <e><p><l/><r><s n="prn"/><s n="p1"/><s n="sg"/><s n="abs"/></r></p></e>
-   <e><p><l/><r><s n="prn"/><s n="p1"/><s n="sg"/><s n="ergpos"/></r></p></e>
+
+  <!-- Pronouns -->
+  <pardef n="/ako__prn">
+   <e><p><l>ako</l><r>ako<s n="prn"/><s n="p1"/><s n="sg"/><s n="abs"/></r></p></e>
+   <e r="LR"><p><l>ko</l><r>ako<s n="prn"/><s n="p1"/><s n="sg"/><s n="abs"/></r></p></e>
+
+   <e><p><l>nako</l><r>ako<s n="prn"/><s n="p1"/><s n="sg"/><s n="ergp"/></r></p></e>
+   <e r="LR"><p><l>ko</l><r>ako<s n="prn"/><s n="p1"/><s n="sg"/><s n="ergp"/></r></p></e>
+
+   <e><p><l>ako</l><r>ako<s n="prn"/><s n="p1"/><s n="sg"/><s n="erg"/></r></p></e>
+   <e r="LR"><p><l>akoa</l><r>ako<s n="prn"/><s n="p1"/><s n="sg"/><s n="erg"/></r></p></e>
+
+   <e><p><l>kanako</l><r>ako<s n="prn"/><s n="p1"/><s n="sg"/><s n="obl"/></r></p></e>
+   <e r="LR"><p><l>nako</l><r>ako<s n="prn"/><s n="p1"/><s n="sg"/><s n="obl"/></r></p></e>
   </pardef>
 
+  
   <pardef n="ikaw__prn">
    <e><p><l/><r><s n="prn"/><s n="p2"/><s n="sg"/><s n="abs"/></r></p></e>
   </pardef>
@@ -67,48 +82,42 @@
    <e><p><l/><r><s n="prn"/><s n="p3"/><s n="pl"/><s n="abs"/></r></p></e>
   </pardef>
   
-  <pardef n="nako__prn">
-   <e><p><l/><r><s n="prn"/><s n="p1"/><s n="sg"/><s n="abs"/></r></p></e>
-  </pardef>
   <pardef n="nimo__prn">
-   <e><p><l/><r><s n="prn"/><s n="p2"/><s n="sg"/><s n="ergpos"/></r></p></e>
+   <e><p><l/><r><s n="prn"/><s n="p2"/><s n="sg"/><s n="ergp"/></r></p></e>
   </pardef>
   <pardef n="niya__prn">
-   <e><p><l/><r><s n="prn"/><s n="p3"/><s n="sg"/><s n="ergpos"/></r></p></e>
+   <e><p><l/><r><s n="prn"/><s n="p3"/><s n="sg"/><s n="ergp"/></r></p></e>
   </pardef>
   <pardef n="nato__prn">
-   <e><p><l/><r><s n="prn"/><s n="p1i"/><s n="pl"/><s n="ergpos"/></r></p></e>
+   <e><p><l/><r><s n="prn"/><s n="p1i"/><s n="pl"/><s n="ergp"/></r></p></e>
   </pardef>
   <pardef n="namo__prn">
-   <e><p><l/><r><s n="prn"/><s n="p1x"/><s n="pl"/><s n="ergpos"/></r></p></e>
+   <e><p><l/><r><s n="prn"/><s n="p1x"/><s n="pl"/><s n="ergp"/></r></p></e>
   </pardef>
   <pardef n="ninyo__prn">
-   <e><p><l/><r><s n="prn"/><s n="p2"/><s n="pl"/><s n="ergpos"/></r></p></e>
+   <e><p><l/><r><s n="prn"/><s n="p2"/><s n="pl"/><s n="ergp"/></r></p></e>
   </pardef>
   <pardef n="nila__prn">
-   <e><p><l/><r><s n="prn"/><s n="p3"/><s n="pl"/><s n="ergpos"/></r></p></e>
+   <e><p><l/><r><s n="prn"/><s n="p3"/><s n="pl"/><s n="ergp"/></r></p></e>
   </pardef>
 
-  <pardef n="akoa__prn">
-   <e><p><l/><r><s n="prn"/><s n="p1"/><s n="sg"/><s n="ergpre"/></r></p></e>
-  </pardef>
   <pardef n="imo__prn">
-   <e><p><l/><r><s n="prn"/><s n="p2"/><s n="sg"/><s n="ergpre"/></r></p></e>
+   <e><p><l/><r><s n="prn"/><s n="p2"/><s n="sg"/><s n="erg"/></r></p></e>
   </pardef>
   <pardef n="iya__prn">
-   <e><p><l/><r><s n="prn"/><s n="p3"/><s n="sg"/><s n="ergpre"/></r></p></e>
+   <e><p><l/><r><s n="prn"/><s n="p3"/><s n="sg"/><s n="erg"/></r></p></e>
   </pardef>
   <pardef n="ato__prn">
-   <e><p><l/><r><s n="prn"/><s n="p1i"/><s n="pl"/><s n="ergpre"/></r></p></e>
+   <e><p><l/><r><s n="prn"/><s n="p1i"/><s n="pl"/><s n="erg"/></r></p></e>
   </pardef>
   <pardef n="amo__prn">
-   <e><p><l/><r><s n="prn"/><s n="p1x"/><s n="pl"/><s n="ergpre"/></r></p></e>
+   <e><p><l/><r><s n="prn"/><s n="p1x"/><s n="pl"/><s n="erg"/></r></p></e>
   </pardef>
   <pardef n="inyo__prn">
-   <e><p><l/><r><s n="prn"/><s n="p2"/><s n="pl"/><s n="ergpre"/></r></p></e>
+   <e><p><l/><r><s n="prn"/><s n="p2"/><s n="pl"/><s n="erg"/></r></p></e>
   </pardef>
   <pardef n="ila__prn">
-   <e><p><l/><r><s n="prn"/><s n="p3"/><s n="pl"/><s n="ergpre"/></r></p></e>
+   <e><p><l/><r><s n="prn"/><s n="p3"/><s n="pl"/><s n="erg"/></r></p></e>
   </pardef>
 </pardefs>
  
@@ -131,7 +140,8 @@
   <e lm="yuta"><i>yuta</i><par n="iro__n"/></e>
 
   <!-- Pronouns -->
-    
+   
+  <e lm="ako"><i/><par n="/ako__prn"/></e> 
 
   <!-- Proper Nouns -->
   <e lm="Dios"><i>Dios</i><par n="Dios__np"/></e>
