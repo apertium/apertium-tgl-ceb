@@ -50,6 +50,12 @@
   <!-- Prepositions -->
   <e lm="sa"><i>sa</i><par n="sa__pr"/></e>
   <e lm="ng"><i>ng</i><par n="sa__pr"/></e>
+  <e lm="ay"><i>ay</i><par n="sa__pr"/></e>
+  <e lm="ni"><i>ni</i><par n="sa__pr"/></e>
+  <e lm="sina"><i>sina</i><par n="sa__pr"/></e>
+  <e lm="taga"><i>taga</i><par n="sa__pr"/></e>
+  <e lm="nasa"><i>nasa</i><par n="sa__pr"/></e>
+  <e lm="si"><i>si</i><par n="sa__pr"/></e>
 
   <!-- Nouns -->
   <e lm="aso"><i>aso</i><par n="aso__n"/></e>
