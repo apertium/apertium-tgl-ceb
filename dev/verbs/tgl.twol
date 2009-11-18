@@ -1,8 +1,8 @@
 Alphabet 
 
-  p t k a e i o u m n 
+  p t k a e i o u m n h
 
-  %+:0 ;
+  %+:0 %> ;
 
 Sets
 
@@ -12,8 +12,15 @@ Sets
 
 Rules
 
-"R realisation as Consonant"
-R:CC <=> _ E: %+: CC ; where CC in Cons ;
+"Remove morpheme boundries"
+%>:0 <=> _ ;
 
-"E realisation as Vowel"
-E:VV <=> _ %+: (Cons:) VV ; where VV in Vow ;
+! bili>in --> bilhin
+"Replace final 'i' with 'h' before suffixes beginning with 'i'" 
+i:h <=> _ %>:0 i ;
+
+!"R realisation as Consonant"
+!R:CC <=> _ E: %+: CC ; where CC in Cons ;
+!
+!"E realisation as Vowel"
+!E:VV <=> _ %+: (Cons:) VV ; where VV in Vow ;
