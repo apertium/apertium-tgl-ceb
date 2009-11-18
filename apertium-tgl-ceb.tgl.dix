@@ -27,12 +27,12 @@
   </pardef>
  </pardefs>
  <section id="main" type="standard">
-  <e lm="mga"><i>mga</i><par n="mga__part"/>
+  <e lm="mga"><i>mga</i><par n="mga__part"/></e>
 
-  <e lm="at"><i>at</i><par n="at__cnjcoo"/>
+  <e lm="at"><i>at</i><par n="at__cnjcoo"/></e>
 
-  <e lm="sa"><i>sa</i><par n="sa__pr"/>
-  <e lm="ng"><i>ng</i><par n="sa__pr"/>
+  <e lm="sa"><i>sa</i><par n="sa__pr"/></e>
+  <e lm="ng"><i>ng</i><par n="sa__pr"/></e>
 
   <e lm="aso"><i>aso</i><par n="aso__n"/></e>
   <e lm="lalaki"><i>lalaki</i><par n="aso__n"/></e>
