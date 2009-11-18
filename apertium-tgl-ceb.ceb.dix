@@ -5,6 +5,7 @@
   <sdef n="n"/>
   <sdef n="part"/>
   <sdef n="cnjcoo"/>
+  <sdef n="cnjsub"/>
   <sdef n="pr"/>
   <sdef n="sg"/>
   <sdef n="pl"/>
@@ -16,6 +17,10 @@
 
   <pardef n="ug__cnjcoo"> 
    <e><p><l/><r><s n="cnjcoo"/></r></p></e>         
+  </pardef>
+
+  <pardef n="tungod__cnjsub"> 
+   <e><p><l/><r><s n="cnjsub"/></r></p></e>         
   </pardef>
 
   <pardef n="sa__pr"> 
@@ -30,6 +35,7 @@
   <e lm="mga"><i>mga</i><par n="mga__part"/></e>
 
   <e lm="ug"><i>ug</i><par n="ug__cnjcoo"/></e>
+  <e lm="tungod"><i>tungod</i><par n="tungod__cnjsub"/></e>
 
   <e lm="sa"><i>sa</i><par n="sa__pr"/></e>
   <e lm="nga"><i>nga</i><par n="sa__pr"/></e> <!-- ? -->

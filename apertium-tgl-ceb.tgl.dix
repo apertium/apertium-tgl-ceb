@@ -7,6 +7,7 @@
   <sdef n="part"   c="Particle"/>
   <sdef n="pr"     c="Preposition"/>
   <sdef n="cnjcoo" c="Co-ordinating conjunction"/>
+  <sdef n="cnjsub" c="Sub-ordinating conjunction"/>
 
   <sdef n="al"     c="Other"/>
 
@@ -25,6 +26,9 @@
   <pardef n="at__cnjcoo">
    <e><p><l/><r><s n="cnjcoo"/></r></p></e> 
   </pardef>
+  <pardef n="dahil__cnjsub">
+   <e><p><l/><r><s n="cnjsub"/></r></p></e> 
+  </pardef>
 
   <pardef n="aso__n"> <!-- dog /-->
    <e><p><l/><r><s n="n"/><s n="sg"/></r></p></e> 
@@ -39,6 +43,9 @@
 
   <!-- Conjunctions -->
   <e lm="at"><i>at</i><par n="at__cnjcoo"/></e>
+  <e lm="o"><i>o</i><par n="at__cnjcoo"/></e>
+
+  <e lm="dahil"><i>dahil</i><par n="dahil__cnjsub"/></e>
 
   <!-- Prepositions -->
   <e lm="sa"><i>sa</i><par n="sa__pr"/></e>
