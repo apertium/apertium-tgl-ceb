@@ -22,16 +22,10 @@
   <sdef n="obl"    c="Oblique" />
  </sdefs>
  <pardefs>
+  <!-- Particles -->
+
   <pardef n="mga__part"> 
    <e><p><l/><r><s n="part"/></r></p></e>         
-  </pardef>
-
-  <pardef n="ug__cnjcoo"> 
-   <e><p><l/><r><s n="cnjcoo"/></r></p></e>         
-  </pardef>
-
-  <pardef n="tungod__cnjsub"> 
-   <e><p><l/><r><s n="cnjsub"/></r></p></e>         
   </pardef>
 
   <pardef n="sa__pr"> 
@@ -42,10 +36,27 @@
    <e><p><l/><r><s n="n"/><s n="sg"/></r></p></e> 
   </pardef>
 
+  <!-- Conjunctions -->
+
+  <pardef n="ug__cnjcoo"> 
+   <e><p><l/><r><s n="cnjcoo"/></r></p></e>         
+  </pardef>
+
+  <pardef n="tungod__cnjsub"> 
+   <e><p><l/><r><s n="cnjsub"/></r></p></e>         
+  </pardef>
+
   <!-- Proper nouns -->
+
   <pardef n="Dios__np"> 
    <e><p><l/><r><s n="np"/><s n="al"/><s n="sg"/></r></p></e>
   </pardef> 
+
+  <!-- Determiners -->
+
+  <pardef n="ang__det">
+   <e><p><l/><r><s n="det"/></r></p></e> 
+  </pardef>
 
   <!-- Pronouns -->
   <pardef n="/ako__prn">
@@ -62,64 +73,83 @@
    <e r="LR"><p><l>nako</l><r>ako<s n="prn"/><s n="p1"/><s n="sg"/><s n="obl"/></r></p></e>
   </pardef>
 
-  
-  <pardef n="ikaw__prn">
-   <e><p><l/><r><s n="prn"/><s n="p2"/><s n="sg"/><s n="abs"/></r></p></e>
-  </pardef>
-  <pardef n="siya__prn">
-   <e><p><l/><r><s n="prn"/><s n="p3"/><s n="sg"/><s n="abs"/></r></p></e>
-  </pardef>
-  <pardef n="kita__prn">
-   <e><p><l/><r><s n="prn"/><s n="p1i"/><s n="pl"/><s n="abs"/></r></p></e>
-  </pardef>
-  <pardef n="kami__prn">
-   <e><p><l/><r><s n="prn"/><s n="p1x"/><s n="pl"/><s n="abs"/></r></p></e>
-  </pardef>
-  <pardef n="kamo__prn">
-   <e><p><l/><r><s n="prn"/><s n="p2"/><s n="pl"/><s n="abs"/></r></p></e>
-  </pardef>
-  <pardef n="sila__prn">
-   <e><p><l/><r><s n="prn"/><s n="p3"/><s n="pl"/><s n="abs"/></r></p></e>
+  <pardef n="/ikaw__prn">
+   <e><p><l>ikaw</l><r>ikaw<s n="prn"/><s n="p2"/><s n="sg"/><s n="abs"/></r></p></e>
+   <e r="LR"><p><l>ka</l><r>ikaw<s n="prn"/><s n="p2"/><s n="sg"/><s n="abs"/></r></p></e>
+
+   <e><p><l>nimo</l><r>ikaw<s n="prn"/><s n="p2"/><s n="sg"/><s n="ergp"/></r></p></e>
+   <e r="LR"><p><l>mo</l><r>ikaw<s n="prn"/><s n="p2"/><s n="sg"/><s n="ergp"/></r></p></e>
+
+   <e><p><l>imo</l><r>ikaw<s n="prn"/><s n="p2"/><s n="sg"/><s n="erg"/></r></p></e>
+   <e r="LR"><p><l>imoha</l><r>ikaw<s n="prn"/><s n="p2"/><s n="sg"/><s n="erg"/></r></p></e>
+
+   <e><p><l>kanimo</l><r>ikaw<s n="prn"/><s n="p2"/><s n="sg"/><s n="obl"/></r></p></e>
+   <e r="LR"><p><l>nimo</l><r>ikaw<s n="prn"/><s n="p2"/><s n="sg"/><s n="obl"/></r></p></e>
   </pardef>
   
-  <pardef n="nimo__prn">
-   <e><p><l/><r><s n="prn"/><s n="p2"/><s n="sg"/><s n="ergp"/></r></p></e>
-  </pardef>
-  <pardef n="niya__prn">
-   <e><p><l/><r><s n="prn"/><s n="p3"/><s n="sg"/><s n="ergp"/></r></p></e>
-  </pardef>
-  <pardef n="nato__prn">
-   <e><p><l/><r><s n="prn"/><s n="p1i"/><s n="pl"/><s n="ergp"/></r></p></e>
-  </pardef>
-  <pardef n="namo__prn">
-   <e><p><l/><r><s n="prn"/><s n="p1x"/><s n="pl"/><s n="ergp"/></r></p></e>
-  </pardef>
-  <pardef n="ninyo__prn">
-   <e><p><l/><r><s n="prn"/><s n="p2"/><s n="pl"/><s n="ergp"/></r></p></e>
-  </pardef>
-  <pardef n="nila__prn">
-   <e><p><l/><r><s n="prn"/><s n="p3"/><s n="pl"/><s n="ergp"/></r></p></e>
+  <pardef n="/siya__prn">
+   <e><p><l>siya</l><r>siya<s n="prn"/><s n="p3"/><s n="sg"/><s n="abs"/></r></p></e>
+
+   <e><p><l>niya</l><r>siya<s n="prn"/><s n="p3"/><s n="sg"/><s n="ergp"/></r></p></e>
+
+   <e><p><l>iya</l><r>siya<s n="prn"/><s n="p3"/><s n="sg"/><s n="erg"/></r></p></e>
+   <e r="LR"><p><l>iyaha</l><r>siya<s n="prn"/><s n="p3"/><s n="sg"/><s n="erg"/></r></p></e>
+
+   <e><p><l>kaniya</l><r>siya<s n="prn"/><s n="p3"/><s n="sg"/><s n="obl"/></r></p></e>
+   <e r="LR"><p><l>niya</l><r>siya<s n="prn"/><s n="p3"/><s n="sg"/><s n="obl"/></r></p></e>
   </pardef>
 
-  <pardef n="imo__prn">
-   <e><p><l/><r><s n="prn"/><s n="p2"/><s n="sg"/><s n="erg"/></r></p></e>
+  <pardef n="/kita__prn">
+   <e><p><l>kita</l><r>kita<s n="prn"/><s n="p1i"/><s n="pl"/><s n="abs"/></r></p></e>
+   <e r="LR"><p><l>ta</l><r>kita<s n="prn"/><s n="p1i"/><s n="pl"/><s n="abs"/></r></p></e>
+
+   <e><p><l>nato</l><r>kita<s n="prn"/><s n="p1i"/><s n="pl"/><s n="ergp"/></r></p></e>
+
+   <e><p><l>ato</l><r>kita<s n="prn"/><s n="p1i"/><s n="pl"/><s n="erg"/></r></p></e>
+   <e r="LR"><p><l>atoa</l><r>kita<s n="prn"/><s n="p1i"/><s n="pl"/><s n="erg"/></r></p></e>
+
+   <e><p><l>kanato</l><r>kita<s n="prn"/><s n="p1i"/><s n="pl"/><s n="obl"/></r></p></e>
+   <e r="LR"><p><l>nato</l><r>kita<s n="prn"/><s n="p1i"/><s n="pl"/><s n="obl"/></r></p></e>
   </pardef>
-  <pardef n="iya__prn">
-   <e><p><l/><r><s n="prn"/><s n="p3"/><s n="sg"/><s n="erg"/></r></p></e>
+
+  <pardef n="/kami__prn">
+   <e><p><l>kami</l><r>kami<s n="prn"/><s n="p1x"/><s n="pl"/><s n="abs"/></r></p></e>
+   <e r="LR"><p><l>mi</l><r>kami<s n="prn"/><s n="p1x"/><s n="pl"/><s n="abs"/></r></p></e>
+
+   <e><p><l>namo</l><r>kami<s n="prn"/><s n="p1x"/><s n="pl"/><s n="ergp"/></r></p></e>
+
+   <e><p><l>amo</l><r>kami<s n="prn"/><s n="p1x"/><s n="pl"/><s n="erg"/></r></p></e>
+   <e r="LR"><p><l>amoa</l><r>kami<s n="prn"/><s n="p1x"/><s n="pl"/><s n="erg"/></r></p></e>
+
+   <e><p><l>kanamo</l><r>kami<s n="prn"/><s n="p1x"/><s n="pl"/><s n="obl"/></r></p></e>
+   <e r="LR"><p><l>namo</l><r>kami<s n="prn"/><s n="p1x"/><s n="pl"/><s n="obl"/></r></p></e>
   </pardef>
-  <pardef n="ato__prn">
-   <e><p><l/><r><s n="prn"/><s n="p1i"/><s n="pl"/><s n="erg"/></r></p></e>
+
+  <pardef n="/kamo__prn">
+   <e><p><l>kamo</l><r>kamo<s n="prn"/><s n="p2"/><s n="pl"/><s n="abs"/></r></p></e>
+   <e r="LR"><p><l>mo</l><r>kamo<s n="prn"/><s n="p2"/><s n="pl"/><s n="abs"/></r></p></e>
+
+   <e><p><l>ninyo</l><r>kamo<s n="prn"/><s n="p2"/><s n="pl"/><s n="ergp"/></r></p></e>
+
+   <e><p><l>inyo</l><r>kamo<s n="prn"/><s n="p2"/><s n="pl"/><s n="erg"/></r></p></e>
+   <e r="LR"><p><l>inyoha</l><r>kamo<s n="prn"/><s n="p2"/><s n="pl"/><s n="erg"/></r></p></e>
+
+   <e><p><l>kaninyo</l><r>kamo<s n="prn"/><s n="p2"/><s n="pl"/><s n="obl"/></r></p></e>
+   <e r="LR"><p><l>ninyo</l><r>kamo<s n="prn"/><s n="p2"/><s n="pl"/><s n="obl"/></r></p></e>
   </pardef>
-  <pardef n="amo__prn">
-   <e><p><l/><r><s n="prn"/><s n="p1x"/><s n="pl"/><s n="erg"/></r></p></e>
+ 
+  <pardef n="/sila__prn">
+   <e><p><l>sila</l><r>sila<s n="prn"/><s n="p3"/><s n="pl"/><s n="abs"/></r></p></e>
+
+   <e><p><l>nila</l><r>sila<s n="prn"/><s n="p3"/><s n="pl"/><s n="ergp"/></r></p></e>
+
+   <e><p><l>ila</l><r>sila<s n="prn"/><s n="p3"/><s n="pl"/><s n="erg"/></r></p></e>
+   <e r="LR"><p><l>ilaha</l><r>sila<s n="prn"/><s n="p3"/><s n="pl"/><s n="erg"/></r></p></e>
+
+   <e><p><l>kanila</l><r>sila<s n="prn"/><s n="p3"/><s n="pl"/><s n="obl"/></r></p></e>
+   <e r="LR"><p><l>nila</l><r>sila<s n="prn"/><s n="p3"/><s n="pl"/><s n="obl"/></r></p></e>
   </pardef>
-  <pardef n="inyo__prn">
-   <e><p><l/><r><s n="prn"/><s n="p2"/><s n="pl"/><s n="erg"/></r></p></e>
-  </pardef>
-  <pardef n="ila__prn">
-   <e><p><l/><r><s n="prn"/><s n="p3"/><s n="pl"/><s n="erg"/></r></p></e>
-  </pardef>
-</pardefs>
+ </pardefs>
  
  <section id="main" type="standard">
   <!-- Particles -->
@@ -143,7 +173,51 @@
   <!-- Pronouns -->
    
   <e lm="ako"><i/><par n="/ako__prn"/></e> 
+  <e lm="ko"><i/><par n="/ako__prn"/></e> 
+  <e lm="nako"><i/><par n="/ako__prn"/></e> 
+  <e lm="akoa"><i/><par n="/ako__prn"/></e> 
+  <e lm="kanako"><i/><par n="/ako__prn"/></e> 
 
+  <e lm="ikaw"><i/><par n="/ikaw__prn"/></e> 
+  <e lm="ka"><i/><par n="/ikaw__prn"/></e> 
+  <e lm="nimo"><i/><par n="/ikaw__prn"/></e> 
+  <e lm="mo"><i/><par n="/ikaw__prn"/></e> 
+  <e lm="imo"><i/><par n="/ikaw__prn"/></e> 
+  <e lm="imoha"><i/><par n="/ikaw__prn"/></e> 
+  <e lm="kanimo"><i/><par n="/ikaw__prn"/></e> 
+  
+  <e lm="siya"><i/><par n="/siya__prn"/></e> 
+  <e lm="niya"><i/><par n="/siya__prn"/></e> 
+  <e lm="iya"><i/><par n="/siya__prn"/></e> 
+  <e lm="iyaha"><i/><par n="/siya__prn"/></e> 
+  <e lm="kaniya"><i/><par n="/siya__prn"/></e> 
+  
+  <e lm="kita"><i/><par n="/kita__prn"/></e> 
+  <e lm="ta"><i/><par n="/kita__prn"/></e> 
+  <e lm="nato"><i/><par n="/kita__prn"/></e> 
+  <e lm="ato"><i/><par n="/kita__prn"/></e> 
+  <e lm="atoa"><i/><par n="/kita__prn"/></e> 
+  <e lm="kanato"><i/><par n="/kita__prn"/></e> 
+
+  <e lm="kami"><i/><par n="/kami__prn"/></e> 
+  <e lm="mi"><i/><par n="/kami__prn"/></e> 
+  <e lm="namo"><i/><par n="/kami__prn"/></e> 
+  <e lm="amo"><i/><par n="/kami__prn"/></e> 
+  <e lm="amoa"><i/><par n="/kami__prn"/></e> 
+  <e lm="kanamo"><i/><par n="/kami__prn"/></e> 
+ 
+  <e lm="kamo"><i/><par n="/kamo__prn"/></e> 
+  <e lm="mo"><i/><par n="/kamo__prn"/></e> 
+  <e lm="ninyo"><i/><par n="/kamo__prn"/></e> 
+  <e lm="inyo"><i/><par n="/kamo__prn"/></e> 
+  <e lm="inyoha"><i/><par n="/kamo__prn"/></e> 
+  <e lm="kaninyo"><i/><par n="/kamo__prn"/></e> 
+  
+  <e lm="sila"><i/><par n="/sila__prn"/></e> 
+  <e lm="nila"><i/><par n="/sila__prn"/></e> 
+  <e lm="ila"><i/><par n="/sila__prn"/></e> 
+  <e lm="ilaha"><i/><par n="/sila__prn"/></e> 
+  <e lm="kanila"><i/><par n="/sila__prn"/></e> 
   <!-- Proper Nouns -->
   <e lm="Dios"><i>Dios</i><par n="Dios__np"/></e>
  </section>
