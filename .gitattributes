@@ -1,1 +1,4 @@
 * text=auto !eol
+/apertium-tgl-ceb.ceb.dix -text
+/apertium-tgl-ceb.tgl-ceb.dix -text
+/apertium-tgl-ceb.tgl.dix -text

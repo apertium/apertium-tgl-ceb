@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionary>
+ <alphabet>ABCDEFGHIJKLMNÑNgOPQRSTUVWXYZabcdefghijklmnñngopqrstuvwxyz</alphabet>
+ <sdefs>
+  <sdef n="n"/>
+  <sdef n="sg"/>
+  <sdef n="pl"/>
+ </sdefs>
+ <pardefs>
+  <pardef n="iro__n"> <!-- dog /-->
+   <e><p><l/><r><s n="n"/><s n="sg"/></r></p></e> 
+  </pardef>
+ </pardefs>
+ <section id="main" type="standard">
+  <e lm="iro"><i>iro</i><par n="iro__n"/></e>
+  <e lm="lalaki"><i>lalaki</i><par n="iro__n"/></e>
+ </section>
+</dictionary>
