@@ -12,30 +12,60 @@
   <sdef n="al"     c="Other"/>
 
   <sdef n="sg"/>
+  <sdef n="du"/>
   <sdef n="pl"/>
  </sdefs>
  <pardefs>
+
+  <!-- Particles -->
   <pardef n="mga__part">
    <e><p><l/><r><s n="part"/></r></p></e> 
   </pardef>
+ 
+  <!-- Prepositions -->
 
   <pardef n="sa__pr">
    <e><p><l/><r><s n="pr"/></r></p></e> 
   </pardef>
 
+  <!-- Conjunctions -->
+
   <pardef n="at__cnjcoo">
    <e><p><l/><r><s n="cnjcoo"/></r></p></e> 
   </pardef>
+
   <pardef n="dahil__cnjsub">
    <e><p><l/><r><s n="cnjsub"/></r></p></e> 
   </pardef>
 
+  <!-- Pronouns -->
+
+  <pardef n="/ako__prn">
+   <e><p><l>ako</l><r>ako<s n="prn"/><s n="p1"/><s n="sg"/><s n="abs"/></r></p></e>
+   <e><p><l>ko</l><r>ako<s n="prn"/><s n="p1"/><s n="sg"/><s n="erg"/></r></p></e>
+   <e><p><l>akin</l><r>ako<s n="prn"/><s n="p1"/><s n="sg"/><s n="obl"/></r></p></e>
+
+   <e><p><l>kita</l><r>ako<s n="prn"/><s n="p1"/><s n="du"/><s n="abs"/></r></p></e>
+   <e r="LR"><p><l>kata</l><r>ako<s n="prn"/><s n="p1"/><s n="du"/><s n="abs"/></r></p></e>
+
+   <e><p><l>nita</l><r>ako<s n="prn"/><s n="p1"/><s n="du"/><s n="erg"/></r></p></e>
+   <e r="LR"><p><l>nata</l><r>ako<s n="prn"/><s n="p1"/><s n="du"/><s n="erg"/></r></p></e>
+
+   <e><p><l>kanita</l><r>ako<s n="prn"/><s n="p1"/><s n="du"/><s n="obl"/></r></p></e>
+   <e r="LR"><p><l>kanata</l><r>ako<s n="prn"/><s n="p1"/><s n="du"/><s n="obl"/></r></p></e>
+  </pardef>
+
+  <!-- Nouns -->
+
   <pardef n="aso__n"> <!-- dog /-->
    <e><p><l/><r><s n="n"/><s n="sg"/></r></p></e> 
   </pardef>
+
   <pardef n="Dios__np">
    <e><p><l/><r><s n="np"/><s n="al"/><s n="sg"/></r></p></e> 
   </pardef>
+
+
  </pardefs>
  
  <section id="main" type="standard">
@@ -57,6 +87,10 @@
   <e lm="taga"><i>taga</i><par n="sa__pr"/></e>
   <e lm="nasa"><i>nasa</i><par n="sa__pr"/></e>
   <e lm="si"><i>si</i><par n="sa__pr"/></e>
+ 
+  <!-- Pronouns -->
+
+  <e lm="ako"><i/><par n="/ako__prn"/></e>
 
   <!-- Nouns -->
   <e lm="aso"><i>aso</i><par n="aso__n"/></e>

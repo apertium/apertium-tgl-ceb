@@ -4,6 +4,7 @@
    <sdefs>
      <sdef n="n"/>
      <sdef n="part"/>
+     <sdef n="prn"/>
      <sdef n="cnjcoo"/>
      <sdef n="cnjsub"/>
      <sdef n="sg"/>
@@ -19,6 +20,8 @@
 
     <e><p><l>sa<s n="pr"/></l><r>sa<s n="pr"/></r></p></e>
     <e><p><l>ng<s n="pr"/></l><r>nga<s n="pr"/></r></p></e>
+
+    <e><p><l>ako<s n="prn"/></l><r>ako<s n="prn"/></r></p></e>
 
     <e><p><l>aso<s n="n"/></l><r>iro<s n="n"/></r></p></e>
     <e><p><l>lalaki<s n="n"/></l><r>lalaki<s n="n"/></r></p></e>
