@@ -173,51 +173,13 @@
   <!-- Pronouns -->
    
   <e lm="ako"><i/><par n="/ako__prn"/></e> 
-  <e lm="ko"><i/><par n="/ako__prn"/></e> 
-  <e lm="nako"><i/><par n="/ako__prn"/></e> 
-  <e lm="akoa"><i/><par n="/ako__prn"/></e> 
-  <e lm="kanako"><i/><par n="/ako__prn"/></e> 
-
   <e lm="ikaw"><i/><par n="/ikaw__prn"/></e> 
-  <e lm="ka"><i/><par n="/ikaw__prn"/></e> 
-  <e lm="nimo"><i/><par n="/ikaw__prn"/></e> 
-  <e lm="mo"><i/><par n="/ikaw__prn"/></e> 
-  <e lm="imo"><i/><par n="/ikaw__prn"/></e> 
-  <e lm="imoha"><i/><par n="/ikaw__prn"/></e> 
-  <e lm="kanimo"><i/><par n="/ikaw__prn"/></e> 
-  
   <e lm="siya"><i/><par n="/siya__prn"/></e> 
-  <e lm="niya"><i/><par n="/siya__prn"/></e> 
-  <e lm="iya"><i/><par n="/siya__prn"/></e> 
-  <e lm="iyaha"><i/><par n="/siya__prn"/></e> 
-  <e lm="kaniya"><i/><par n="/siya__prn"/></e> 
-  
   <e lm="kita"><i/><par n="/kita__prn"/></e> 
-  <e lm="ta"><i/><par n="/kita__prn"/></e> 
-  <e lm="nato"><i/><par n="/kita__prn"/></e> 
-  <e lm="ato"><i/><par n="/kita__prn"/></e> 
-  <e lm="atoa"><i/><par n="/kita__prn"/></e> 
-  <e lm="kanato"><i/><par n="/kita__prn"/></e> 
-
   <e lm="kami"><i/><par n="/kami__prn"/></e> 
-  <e lm="mi"><i/><par n="/kami__prn"/></e> 
-  <e lm="namo"><i/><par n="/kami__prn"/></e> 
-  <e lm="amo"><i/><par n="/kami__prn"/></e> 
-  <e lm="amoa"><i/><par n="/kami__prn"/></e> 
-  <e lm="kanamo"><i/><par n="/kami__prn"/></e> 
- 
   <e lm="kamo"><i/><par n="/kamo__prn"/></e> 
-  <e lm="mo"><i/><par n="/kamo__prn"/></e> 
-  <e lm="ninyo"><i/><par n="/kamo__prn"/></e> 
-  <e lm="inyo"><i/><par n="/kamo__prn"/></e> 
-  <e lm="inyoha"><i/><par n="/kamo__prn"/></e> 
-  <e lm="kaninyo"><i/><par n="/kamo__prn"/></e> 
-  
   <e lm="sila"><i/><par n="/sila__prn"/></e> 
-  <e lm="nila"><i/><par n="/sila__prn"/></e> 
-  <e lm="ila"><i/><par n="/sila__prn"/></e> 
-  <e lm="ilaha"><i/><par n="/sila__prn"/></e> 
-  <e lm="kanila"><i/><par n="/sila__prn"/></e> 
+
   <!-- Proper Nouns -->
   <e lm="Dios"><i>Dios</i><par n="Dios__np"/></e>
  </section>
