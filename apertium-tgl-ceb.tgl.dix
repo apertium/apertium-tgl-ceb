@@ -3,9 +3,13 @@
  <alphabet>ABCDEFGHIJKLMNÑNgOPQRSTUVWXYZabcdefghijklmnñngopqrstuvwxyz</alphabet>
  <sdefs>
   <sdef n="n"      c="Noun"/>
+  <sdef n="np"     c="Proper noun"/>
   <sdef n="part"   c="Particle"/>
   <sdef n="pr"     c="Preposition"/>
   <sdef n="cnjcoo" c="Co-ordinating conjunction"/>
+
+  <sdef n="al"     c="Other"/>
+
   <sdef n="sg"/>
   <sdef n="pl"/>
  </sdefs>
@@ -25,16 +29,29 @@
   <pardef n="aso__n"> <!-- dog /-->
    <e><p><l/><r><s n="n"/><s n="sg"/></r></p></e> 
   </pardef>
+  <pardef n="Wikipedia__np">
+   <e><p><l/><r><s n="np"/><s n="al"/><s n="sg"/></r></p></e> 
+  </pardef>
  </pardefs>
  <section id="main" type="standard">
+  <!-- Particles -->
   <e lm="mga"><i>mga</i><par n="mga__part"/></e>
 
+  <!-- Conjunctions -->
   <e lm="at"><i>at</i><par n="at__cnjcoo"/></e>
 
+  <!-- Prepositions -->
   <e lm="sa"><i>sa</i><par n="sa__pr"/></e>
   <e lm="ng"><i>ng</i><par n="sa__pr"/></e>
 
+  <!-- Nouns -->
   <e lm="aso"><i>aso</i><par n="aso__n"/></e>
   <e lm="lalaki"><i>lalaki</i><par n="aso__n"/></e>
+  <e lm="langit"><i>langit</i><par n="aso__n"/></e>
+  <e lm="lupa"><i>lupa</i><par n="aso__n"/></e>
+
+  <!-- Proper nouns -->
+  <e lm="Wikipedia"><i>Wikipedia</i><par n="Wikipedia__np"/></e>
+  <e lm="Dios"><i>Dios</i><par n="Wikipedia__np"/></e>
  </section>
 </dictionary>
