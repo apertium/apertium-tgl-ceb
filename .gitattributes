@@ -2,3 +2,5 @@
 /apertium-tgl-ceb.ceb.dix -text
 /apertium-tgl-ceb.tgl-ceb.dix -text
 /apertium-tgl-ceb.tgl.dix -text
+dev/ceb.hitparade.txt -text
+dev/tgl.hitparade.txt -text
