@@ -3,11 +3,14 @@
    <alphabet/>
    <sdefs>
      <sdef n="n"/>
+     <sdef n="part"/>
      <sdef n="sg"/>
      <sdef n="pl"/>
    </sdefs>
 
    <section id="main" type="standard">
+    <e><p><l>mga<s n="part"/></l><r>mga<s n="part"/></r></p></e>
+
     <e><p><l>aso<s n="n"/></l><r>iro<s n="n"/></r></p></e>
     <e><p><l>lalaki<s n="n"/></l><r>lalaki<s n="n"/></r></p></e>
    </section>

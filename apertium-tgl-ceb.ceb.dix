@@ -3,15 +3,21 @@
  <alphabet>ABCDEFGHIJKLMNÑNgOPQRSTUVWXYZabcdefghijklmnñngopqrstuvwxyz</alphabet>
  <sdefs>
   <sdef n="n"/>
+  <sdef n="part"/>
   <sdef n="sg"/>
   <sdef n="pl"/>
  </sdefs>
  <pardefs>
+  <pardef n="mga__part"> 
+   <e><p><l/><r><s n="part"/></r></p></e>         
+  </pardef>
+
   <pardef n="iro__n"> <!-- dog /-->
    <e><p><l/><r><s n="n"/><s n="sg"/></r></p></e> 
   </pardef>
  </pardefs>
  <section id="main" type="standard">
+  <e lm="mga"><i>mga</i><par n="mga__part"/></e>
   <e lm="iro"><i>iro</i><par n="iro__n"/></e>
   <e lm="lalaki"><i>lalaki</i><par n="iro__n"/></e>
  </section>

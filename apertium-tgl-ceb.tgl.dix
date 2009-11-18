@@ -2,16 +2,22 @@
 <dictionary>
  <alphabet>ABCDEFGHIJKLMNÑNgOPQRSTUVWXYZabcdefghijklmnñngopqrstuvwxyz</alphabet>
  <sdefs>
-  <sdef n="n"/>
+  <sdef n="n"      c="Noun"/>
+  <sdef n="part"   c="Particle"/>
   <sdef n="sg"/>
   <sdef n="pl"/>
  </sdefs>
  <pardefs>
+  <pardef n="mga__part">
+   <e><p><l/><r><s n="part"/></r></p></e> 
+  </pardef>
+
   <pardef n="aso__n"> <!-- dog /-->
    <e><p><l/><r><s n="n"/><s n="sg"/></r></p></e> 
   </pardef>
  </pardefs>
  <section id="main" type="standard">
+  <e lm="mga"><i>mga</i><par n="mga__part"/>
   <e lm="aso"><i>aso</i><par n="aso__n"/></e>
   <e lm="lalaki"><i>lalaki</i><par n="aso__n"/></e>
  </section>
