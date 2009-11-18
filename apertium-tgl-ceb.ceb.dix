@@ -4,6 +4,7 @@
  <sdefs>
   <sdef n="n"/>
   <sdef n="part"/>
+  <sdef n="cnjcoo"/>
   <sdef n="pr"/>
   <sdef n="sg"/>
   <sdef n="pl"/>
@@ -11,6 +12,10 @@
  <pardefs>
   <pardef n="mga__part"> 
    <e><p><l/><r><s n="part"/></r></p></e>         
+  </pardef>
+
+  <pardef n="ug__cnjcoo"> 
+   <e><p><l/><r><s n="cnjcoo"/></r></p></e>         
   </pardef>
 
   <pardef n="sa__pr"> 
@@ -23,6 +28,8 @@
  </pardefs>
  <section id="main" type="standard">
   <e lm="mga"><i>mga</i><par n="mga__part"/></e>
+
+  <e lm="ug"><i>ug</i><par n="ug__cnjcoo"/></e>
 
   <e lm="sa"><i>sa</i><par n="sa__pr"/></e>
   <e lm="nga"><i>nga</i><par n="sa__pr"/></e> <!-- ? -->

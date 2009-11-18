@@ -5,6 +5,7 @@
   <sdef n="n"      c="Noun"/>
   <sdef n="part"   c="Particle"/>
   <sdef n="pr"     c="Preposition"/>
+  <sdef n="cnjcoo" c="Co-ordinating conjunction"/>
   <sdef n="sg"/>
   <sdef n="pl"/>
  </sdefs>
@@ -17,12 +18,18 @@
    <e><p><l/><r><s n="pr"/></r></p></e> 
   </pardef>
 
+  <pardef n="at__cnjcoo">
+   <e><p><l/><r><s n="cnjcoo"/></r></p></e> 
+  </pardef>
+
   <pardef n="aso__n"> <!-- dog /-->
    <e><p><l/><r><s n="n"/><s n="sg"/></r></p></e> 
   </pardef>
  </pardefs>
  <section id="main" type="standard">
   <e lm="mga"><i>mga</i><par n="mga__part"/>
+
+  <e lm="at"><i>at</i><par n="at__cnjcoo"/>
 
   <e lm="sa"><i>sa</i><par n="sa__pr"/>
   <e lm="ng"><i>ng</i><par n="sa__pr"/>
