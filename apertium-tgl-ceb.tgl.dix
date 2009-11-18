@@ -5,15 +5,25 @@
   <sdef n="n"      c="Noun"/>
   <sdef n="np"     c="Proper noun"/>
   <sdef n="part"   c="Particle"/>
+  <sdef n="prn"    c="Pronoun"/>
+  <sdef n="det"    c="Determiner"/>
   <sdef n="pr"     c="Preposition"/>
   <sdef n="cnjcoo" c="Co-ordinating conjunction"/>
   <sdef n="cnjsub" c="Sub-ordinating conjunction"/>
 
   <sdef n="al"     c="Other"/>
 
+  <sdef n="p1"/>
+  <sdef n="p2"/>
+  <sdef n="p3"/>
+
   <sdef n="sg"/>
   <sdef n="du"/>
   <sdef n="pl"/>
+
+  <sdef n="abs"/>
+  <sdef n="erg"/>
+  <sdef n="obl"/>
  </sdefs>
  <pardefs>
 
@@ -36,6 +46,12 @@
 
   <pardef n="dahil__cnjsub">
    <e><p><l/><r><s n="cnjsub"/></r></p></e> 
+  </pardef>
+
+  <!-- Determiners -->
+
+  <pardef n="ang__det">
+   <e><p><l/><r><s n="det"/></r></p></e> 
   </pardef>
 
   <!-- Pronouns -->
@@ -92,11 +108,16 @@
 
   <e lm="ako"><i/><par n="/ako__prn"/></e>
 
+  <!-- Determiners -->
+
+  <e lm="ang"><i>ang</i><par n="ang__det"/></e>
+
   <!-- Nouns -->
   <e lm="aso"><i>aso</i><par n="aso__n"/></e>
   <e lm="lalaki"><i>lalaki</i><par n="aso__n"/></e>
   <e lm="langit"><i>langit</i><par n="aso__n"/></e>
   <e lm="lupa"><i>lupa</i><par n="aso__n"/></e>
+  <e lm="bahay"><i>bahay</i><par n="aso__n"/></e>
 
   <!-- Proper nouns -->
   <e lm="Wikipedia"><i>Wikipedia</i><par n="Dios__np"/></e>
