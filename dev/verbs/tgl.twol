@@ -1,0 +1,19 @@
+Alphabet 
+
+  p t k a e i o u m n R  E 
+
+  %+:0 ;
+
+Sets
+
+  Cons = p t k ; 
+  Vow = a e i o u ;
+  Nas = m n ;
+
+Rules
+
+"R realisation as Consonant"
+R:CC <=> _ E: %+: CC ; where CC in Cons ;
+
+"E realisation as Vowel"
+E:VV <=> _ %+: (Cons:) VV ; where VV in Vow ;

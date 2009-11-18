@@ -5,3 +5,5 @@
 dev/ceb.hitparade.txt -text
 dev/test_phrases.txt -text
 dev/tgl.hitparade.txt -text
+dev/verbs/tgl.lexc -text
+dev/verbs/tgl.twol -text
