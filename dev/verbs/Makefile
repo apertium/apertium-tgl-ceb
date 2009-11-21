@@ -11,3 +11,6 @@ tgl-gen.fst: tgl-lexc.fst tgl-twol.fst
 
 tgl-morph.fst: tgl-gen.fst
 	hfst-invert tgl-gen.fst > $@
+
+clean: 
+	rm tgl-gen.fst tgl-morph.fst tgl-twol.fst tgl-lexc.fst

@@ -132,6 +132,7 @@
   <e lm="langit"><i>langit</i><par n="aso__n"/></e>
   <e lm="lupa"><i>lupa</i><par n="aso__n"/></e>
   <e lm="bahay"><i>bahay</i><par n="aso__n"/></e>
+  <e lm="pasiya"><i>pasiya</i><par n="aso__n"/></e>
 
   <!-- Proper nouns -->
   <e lm="Wikipedia"><i>Wikipedia</i><par n="Dios__np"/></e>

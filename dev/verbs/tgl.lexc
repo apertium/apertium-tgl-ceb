@@ -18,6 +18,9 @@ RE+                         VRoots ;
 
 LEXICON VRoots
 bili           VConjReg ; ! "buy" 
+
+!! Comment out all verbs until we have some working morphology
+
 !pili           VConjReg ; ! "choose"
 !tahi           VConjReg ; ! "sew" 
 !kuha           VConjReg ; ! "take" 

@@ -2,6 +2,9 @@ Alphabet
 
   p t k a e i o u m n h b
 
+  E:a E:i E:o E:u E:e
+  R:p R:b R:t R:k
+
   @P.ACT3.ON@  @P.ACT1.ON@
   %+:0 %> %^UM ;
 
@@ -25,15 +28,15 @@ i:h <=> _ %>:0 i ;
 n:m <=> _ %>:0 @P.ACT3.ON@ b ; 
 
 ! mambili --> mamili
-"Nasal deletion"
-b:0 <=> m _ @P.ACT3.ON@ ;
+!"Nasal deletion"
+!b:0 <=> m _ @P.ACT3.ON@ ;
 
 ! %^UM>bili --> bumili
-"Infix insertion"
-%^UM:0 <=> %>:0 _ @P.ACT1.ON@ ; 
+!"Infix insertion"
+!%^UM:0 <=> %>:0 _ @P.ACT1.ON@ ; 
 
-!"R realisation as Consonant"
-!R:CC <=> _ E: %+: CC ; where CC in Cons ;
-!
-!"E realisation as Vowel"
-!E:VV <=> _ %+: (Cons:) VV ; where VV in Vow ;
+"R realisation as Consonant"
+R:CC <=> _ E: %+: CC ; where CC in Cons ;
+
+"E realisation as Vowel"
+E:VV <=> _ %+: (Cons:) VV ; where VV in Vow ;
