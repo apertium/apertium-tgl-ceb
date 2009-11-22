@@ -3,6 +3,7 @@
 /apertium-tgl-ceb.tgl-ceb.dix -text
 /apertium-tgl-ceb.tgl.dix -text
 dev/ceb.hitparade.txt -text
+dev/scream-filengnor.py -text
 dev/test_phrases.txt -text
 dev/tgl.hitparade.txt -text
 dev/verbs/Makefile -text
