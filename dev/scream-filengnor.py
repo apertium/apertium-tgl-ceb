@@ -1,13 +1,12 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-version = "0.1"
+version = "0.2"
 
 import warnings # Because deprecation sounds suck!
 warnings.filterwarnings('ignore', category=DeprecationWarning)
 
 import sys, pycurl, StringIO, html5lib #, chardet
 from html5lib import treebuilders
-from BeautifulSoup import BeautifulSoup
 
 from xml.sax.handler import ContentHandler # XML parsing modules
 from xml.sax import make_parser, parseString # XML parser
@@ -26,16 +25,24 @@ class dirtyTableHandler(ContentHandler):
 	def shortOutput(self):
 		long1 = 0
 		long2 = 0
+		long3 = 0
 		for i in range(len(self.dump)):
 			if len(self.dump[i][0]) > long1:
 				long1 = len(self.dump[i][0])
 			if len(self.dump[i][1]) > long2:
 				long2 = len(self.dump[i][1])
+			if len(self.dump[i][4]) > long3:
+				long3 = len(self.dump[i][4])
 		for i in range(len(self.dump)):
+			x = [0]*5
 			if i == 0:
-				print "\033[4m{0:{3}}\033[0m  {1:^{4}}  \033[4m{2}\033[0m".format(self.dump[i][0].encode("utf-8"), "\033[4m%s\033[0m" % self.dump[i][1].encode("utf-8"), self.dump[i][4].encode("utf-8"), long1, long2)
-			else:
-				print "{0:{3}}  {1:{4}}  {2}".format(self.dump[i][0].encode("utf-8"), self.dump[i][1].encode("utf-8"), self.dump[i][4].encode("utf-8"), long1, long2)
+				print "\033[4m{0:^{3}}\033[0m  \033[4m{1:^{4}}\033[0m  \033[4m{2:^{5}}\033[0m".format(self.dump[i][0], self.dump[i][1], self.dump[i][4], long1, long2, long3)
+			
+			for j in [0,1,4]:
+				if self.dump[i][j].count("\033") > 0:
+					x[j] = 13
+			if i != 0:
+				print "{0:<{3}}  {1:<{4}}  {2:<{5}}".format(self.dump[i][0], self.dump[i][1], self.dump[i][4], (long1+x[0]), (long2+x[1]), (long3+x[4]))	
 	 
 	def startElement(self, tag, attrs):
 		if tag == "table":
@@ -66,6 +73,8 @@ class dirtyTableHandler(ContentHandler):
 			self.isTable = False
 		elif tag == "tr":
 			if self.trCount > 2:
+				for i in range(len(self.predump)):
+					self.predump[i] = self.predump[i].replace(args, u"\033[34m\033[1m%s\033[0m" % args).encode("utf-8")
 				self.dump.append(self.predump)
 				self.predump = []
 			self.isTr = False
@@ -110,6 +119,7 @@ if arglen > 1:
 		for i in sys.argv[x:]:
 			args += "%s " % i
 			#print "Query: %s" % args
+			args = args.strip()
 	else: 
 		print "Query missing, exiting."
 		usage()
