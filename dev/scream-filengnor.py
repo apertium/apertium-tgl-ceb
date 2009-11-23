@@ -5,13 +5,15 @@ version = "0.2"
 import warnings # Because deprecation sounds suck!
 warnings.filterwarnings('ignore', category=DeprecationWarning)
 
-import sys, pycurl, StringIO, html5lib #, chardet
+import getopt, sys, pycurl, StringIO, html5lib #, chardet
 from html5lib import treebuilders
+sys.setrecursionlimit(20000) # Because spectie uses Python 2.5. That's my rationale, and I'm sticking with it.
 
 from xml.sax.handler import ContentHandler # XML parsing modules
 from xml.sax import make_parser, parseString # XML parser
 
 class dirtyTableHandler(ContentHandler):
+	pFlag = False
 	dump = []
 	tableCount = 0
 	isTable = False
@@ -22,7 +24,19 @@ class dirtyTableHandler(ContentHandler):
 	anyTag = 0
 	output = ""
 	predump = []
+	def selectedOutput(self):
+		if self.pFlag:
+			self.shortOutput()	
+		else:
+			self.longOutput()
 	def shortOutput(self):
+		for i in range(len(self.dump)):
+			for j in (0,1,4):
+				if self.dump[i][j].find(args) == 0:
+					print "%s %s %s" % (self.dump[i][0], self.dump[i][1], self.dump[i][4])
+					break
+			
+	def longOutput(self):
 		long1 = 0
 		long2 = 0
 		long3 = 0
@@ -73,8 +87,9 @@ class dirtyTableHandler(ContentHandler):
 			self.isTable = False
 		elif tag == "tr":
 			if self.trCount > 2:
-				for i in range(len(self.predump)):
-					self.predump[i] = self.predump[i].replace(args, u"\033[34m\033[1m%s\033[0m" % args).encode("utf-8")
+				if not pFlag:
+					for i in range(len(self.predump)):
+						self.predump[i] = self.predump[i].replace(args, u"\033[34m\033[1m%s\033[0m" % args).encode("utf-8")
 				self.dump.append(self.predump)
 				self.predump = []
 			self.isTr = False
@@ -93,39 +108,35 @@ class dirtyTableHandler(ContentHandler):
 url = "http://baseportal.com/cgi-bin/baseportal.pl?htx=/fileng/allsearch&list=100"
 args = ''
 oFlag = False
+pFlag = False
 oFile = ""
 arglen = len(sys.argv)
 x = 1
 def usage():
-	print "scream-filengnor.py [-o output.html] <search query>"
+	print "scream-filengnor.py [-o output.html] [-p] <search query>"
 	print "Totally sexy FilEngNor parsing with awesome column layout!"
 	exit(0)
-
-if arglen > 1:
-	if sys.argv[1] in ["--help", "-h"]:
-		usage()
-	if sys.argv[1] in ["--version", "-v"]:
+try:
+	opts, args = getopt.getopt(sys.argv[1:], "hvpo:", ['help', 'version', 'output='])
+except getopt.GetoptError, err:
+	print str(err)
+	usage()
+if args == []:
+	usage()
+for o, a in opts:
+	if o in ("-v", "--version"):
 		print version
 		exit(0)
-	if sys.argv[1] == "-o":
-		if arglen > 3:
-			oFlag = True
-			oFile = sys.argv[2]
-			x = 3
-		else:
-			print "Now you know you shouldn't do that. >:|"
-			exit(1)
-	if arglen > x:
-		for i in sys.argv[x:]:
-			args += "%s " % i
-			#print "Query: %s" % args
-			args = args.strip()
-	else: 
-		print "Query missing, exiting."
+	if o in ("--help", "-h"):
 		usage()
-else:
-	usage()
-
+	if o in ("-o", "--output"):
+		oFile = a
+		oFlag = True
+	if o == "-p":
+		pFlag = True
+	else:
+		assert False, "unhandled option"
+args = " ".join(args) # Sexy, sexy hacks!
 pf = [	('_fullsearch==', args),
 	('list=', '45000')  ]
 
@@ -133,6 +144,7 @@ out = StringIO.StringIO()
 c = pycurl.Curl()
 c.setopt(c.URL, url)
 c.setopt(c.HTTPPOST, pf)
+c.setopt(pycurl.USERAGENT, "Mozilla/5.0 (X11; U; Linux i686 (x86_64); en-US; rv:1.9.1.5) Gecko/20091102 Firefox/3.5.5")
 c.setopt(c.WRITEFUNCTION, out.write)
 c.perform()
 c.close()
@@ -150,8 +162,10 @@ if oFlag:
 
 parser = make_parser()
 o = dirtyTableHandler()
+if pFlag:
+	o.pFlag = True
 parser.setContentHandler(o)
 parser.parse(StringIO.StringIO(out))
 o.dump.pop(0) # Fix for random error that I cant be bothered to work out
 o.dump.pop(len(o.dump)-1) # <3 half-assed cleanups
-o.shortOutput()
+o.selectedOutput()
