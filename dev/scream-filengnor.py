@@ -30,9 +30,18 @@ class dirtyTableHandler(ContentHandler):
 		else:
 			self.longOutput()
 	def shortOutput(self):
+		kgo = False
 		for i in range(len(self.dump)):
 			for j in (0,1,4):
 				if self.dump[i][j].find(args) == 0:
+					if self.dump[i][j][-(len(args)+1):] == args:
+						kgo = True
+					else:
+						for k in range(10):
+							if self.dump[i][j].find(str(k)+")") != -1:
+								kgo = True
+				if kgo:
+					kgo = False
 					print "%s %s %s" % (self.dump[i][0], self.dump[i][1], self.dump[i][4])
 					break
 			
