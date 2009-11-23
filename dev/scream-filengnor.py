@@ -31,6 +31,7 @@ class dirtyTableHandler(ContentHandler):
 			self.longOutput()
 	def shortOutput(self):
 		kgo = False
+		where = 0
 		for i in range(len(self.dump)):
 			for j in (0,1,4):
 				if self.dump[i][j].find(args) == 0:
@@ -39,7 +40,9 @@ class dirtyTableHandler(ContentHandler):
 					else:
 						for k in range(10):
 							if self.dump[i][j].find(str(k)+")") != -1:
-								kgo = True
+								where = self.dump[i][j].find(str(k)+")") 
+								if self.dump[i][j].count(" ")  == (where - len(args)) :
+									kgo = True
 				if kgo:
 					kgo = False
 					print "%s %s %s" % (self.dump[i][0], self.dump[i][1], self.dump[i][4])
