@@ -90,6 +90,9 @@ class dirtyTableHandler(ContentHandler):
 				if not pFlag:
 					for i in range(len(self.predump)):
 						self.predump[i] = self.predump[i].replace(args, u"\033[34m\033[1m%s\033[0m" % args).encode("utf-8")
+				else:
+					for i in range(len(self.predump)):
+						self.predump[i] = self.predump[i].encode("utf-8")
 				self.dump.append(self.predump)
 				self.predump = []
 			self.isTr = False
