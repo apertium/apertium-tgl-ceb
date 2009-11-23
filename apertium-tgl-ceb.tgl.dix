@@ -6,6 +6,7 @@
   <sdef n="np"     c="Proper noun"/>
   <sdef n="part"   c="Particle"/>
   <sdef n="prn"    c="Pronoun"/>
+  <sdef n="adj"    c="Adjective"/>
   <sdef n="det"    c="Determiner"/>
   <sdef n="pr"     c="Preposition"/>
   <sdef n="cnjcoo" c="Co-ordinating conjunction"/>
@@ -71,6 +72,12 @@
 
    <e><p><l>kanita</l><r>ako<s n="prn"/><s n="p1"/><s n="du"/><s n="obl"/></r></p></e>
    <e r="LR"><p><l>kanata</l><r>ako<s n="prn"/><s n="p1"/><s n="du"/><s n="obl"/></r></p></e>
+  </pardef>
+
+  <!-- Determiners -->
+
+  <pardef n="malinis__adj">
+   <e><p><l/><r><s n="adj"/></r></p></e> 
   </pardef>
 
   <!-- Nouns -->
@@ -421,10 +428,17 @@
   <e lm="pangitain"><i>pangitain</i><par n="aso__n"/></e>
 
   <!-- Proper nouns -->
+
   <e lm="Wikipedia"><i>Wikipedia</i><par n="Dios__np"/></e>
   <e lm="Dios"><i>Dios</i><par n="Dios__np"/></e>
 
-  <e lm="Israel"><i></i><par n="Israel__np"/></e>
+  <e lm="Israel"><i>Israel</i><par n="Israel__np"/></e>
+
+  <!-- Adjectives -->
+
+  <e lm="malinis"><i>malinis</i><par n="malinis__adj"/></e>
+  <e lm="dalaga"><i>dalaga</i><par n="malinis__adj"/></e>
+  <e lm="panganay"><i>panganay</i><par n="malinis__adj"/></e>
 
  </section>
 </dictionary>
