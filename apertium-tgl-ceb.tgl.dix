@@ -22,13 +22,17 @@
   <sdef n="p2"/>
   <sdef n="p3"/>
 
+  <sdef n="dem"    c="Demonstrative"/>
+
   <sdef n="sg"/>
   <sdef n="du"/>
   <sdef n="pl"/>
 
-  <sdef n="abs"/>
-  <sdef n="erg"/>
-  <sdef n="obl"/>
+  <sdef n="abs"    c="Absolutive"/>
+  <sdef n="erg"    c="Ergative"/>
+  <sdef n="obl"    c="Oblique"/>
+  <sdef n="loc"    c="Locative"/>
+  <sdef n="exi"    c="Existential"/>
  </sdefs>
  <pardefs>
 
@@ -107,6 +111,35 @@
    <e><p><l>kanila</l><r>siya<s n="prn"/><s n="p3"/><s n="pl"/><s n="obl"/></r></p></e>
   </pardef>
 
+  <pardef n="/ito__prn">
+   <e><p><l>ito</l><r>ito<s n="prn"/><s n="dem"/><s n="abs"/></r></p></e>
+   <e><p><l>nito</l><r>ito<s n="prn"/><s n="dem"/><s n="erg"/></r></p></e>
+   <e><p><l>dito</l><r>ito<s n="prn"/><s n="dem"/><s n="obl"/></r></p></e>
+   <e r="LR"><p><l>rito</l><r>ito<s n="prn"/><s n="dem"/><s n="obl"/></r></p></e>
+   <e><p><l>nandito</l><r>ito<s n="prn"/><s n="dem"/><s n="loc"/></r></p></e>
+   <e r="LR"><p><l>narito</l><r>ito<s n="prn"/><s n="dem"/><s n="loc"/></r></p></e>
+   <e><p><l>heto</l><r>ito<s n="prn"/><s n="dem"/><s n="exi"/></r></p></e>
+  </pardef>
+
+  <pardef n="/iyan__prn">
+   <e><p><l>iyan</l><r>iyan<s n="prn"/><s n="dem"/><s n="abs"/></r></p></e>
+   <e><p><l>niyan</l><r>iyan<s n="prn"/><s n="dem"/><s n="erg"/></r></p></e>
+   <e><p><l>diyan</l><r>iyan<s n="prn"/><s n="dem"/><s n="obl"/></r></p></e>
+   <e r="LR"><p><l>riyan</l><r>iyan<s n="prn"/><s n="dem"/><s n="obl"/></r></p></e>
+   <e><p><l>nandiyan</l><r>iyan<s n="prn"/><s n="dem"/><s n="loc"/></r></p></e>
+   <e r="LR"><p><l>nariyan</l><r>iyan<s n="prn"/><s n="dem"/><s n="loc"/></r></p></e>
+   <e><p><l>ayan</l><r>iyan<s n="prn"/><s n="dem"/><s n="exi"/></r></p></e>
+  </pardef>
+
+  <pardef n="/iyon__prn">
+   <e><p><l>iyon</l><r>iyon<s n="prn"/><s n="dem"/><s n="abs"/></r></p></e>
+   <e><p><l>niyon</l><r>iyon<s n="prn"/><s n="dem"/><s n="erg"/></r></p></e>
+   <e><p><l>doon</l><r>iyon<s n="prn"/><s n="dem"/><s n="obl"/></r></p></e>
+   <e r="LR"><p><l>roon</l><r>iyon<s n="prn"/><s n="dem"/><s n="obl"/></r></p></e>
+   <e><p><l>nandoon</l><r>iyon<s n="prn"/><s n="dem"/><s n="loc"/></r></p></e>
+   <e r="LR"><p><l>naroon</l><r>iyon<s n="prn"/><s n="dem"/><s n="loc"/></r></p></e>
+   <e><p><l>ayon</l><r>iyon<s n="prn"/><s n="dem"/><s n="exi"/></r></p></e>
+  </pardef>
 
   <!-- Determiners -->
 
@@ -169,6 +202,10 @@
   <e lm="ako"><i/><par n="/ako__prn"/></e>
   <e lm="ikaw"><i/><par n="/ikaw__prn"/></e>
   <e lm="siya"><i/><par n="/siya__prn"/></e>
+
+  <e lm="ito"><i/><par n="/ito__prn"/></e>
+  <e lm="iyan"><i/><par n="/iyan__prn"/></e>
+  <e lm="iyon"><i/><par n="/iyon__prn"/></e>
 
   <!-- Determiners -->
 
