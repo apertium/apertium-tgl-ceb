@@ -17,6 +17,8 @@
   <sdef n="top"    c="Toponym"/>
 
   <sdef n="p1"/>
+  <sdef n="p1i"/>
+  <sdef n="p1x"/>
   <sdef n="p2"/>
   <sdef n="p3"/>
 
@@ -72,7 +74,39 @@
 
    <e><p><l>kanita</l><r>ako<s n="prn"/><s n="p1"/><s n="du"/><s n="obl"/></r></p></e>
    <e r="LR"><p><l>kanata</l><r>ako<s n="prn"/><s n="p1"/><s n="du"/><s n="obl"/></r></p></e>
+
+   <e><p><l>tayo</l><r>ako<s n="prn"/><s n="p1i"/><s n="pl"/><s n="abs"/></r></p></e>
+   <e><p><l>natin</l><r>ako<s n="prn"/><s n="p1i"/><s n="pl"/><s n="erg"/></r></p></e>
+   <e><p><l>atin</l><r>ako<s n="prn"/><s n="p1i"/><s n="pl"/><s n="obl"/></r></p></e>
+
+   <e><p><l>kami</l><r>ako<s n="prn"/><s n="p1x"/><s n="pl"/><s n="abs"/></r></p></e>
+   <e><p><l>namin</l><r>ako<s n="prn"/><s n="p1x"/><s n="pl"/><s n="erg"/></r></p></e>
+   <e><p><l>amin</l><r>ako<s n="prn"/><s n="p1x"/><s n="pl"/><s n="obl"/></r></p></e>
   </pardef>
+
+  <pardef n="/ikaw__prn">
+   <e r="RL"><p><l><a/>ikaw</l><r>ikaw<s n="prn"/><s n="p2"/><s n="sg"/><s n="abs"/></r></p></e>
+   <e r="LR"><p><l>ikaw</l><r>ikaw<s n="prn"/><s n="p2"/><s n="sg"/><s n="abs"/></r></p></e>
+   <e r="LR"><p><l>ka</l><r>ikaw<s n="prn"/><s n="p2"/><s n="sg"/><s n="abs"/></r></p></e>
+
+   <e><p><l>mo</l><r>ikaw<s n="prn"/><s n="p2"/><s n="sg"/><s n="erg"/></r></p></e>
+   <e><p><l>iyo</l><r>ikaw<s n="prn"/><s n="p2"/><s n="sg"/><s n="obl"/></r></p></e>
+
+   <e><p><l>kayo</l><r>ikaw<s n="prn"/><s n="p2"/><s n="pl"/><s n="abs"/></r></p></e>
+   <e><p><l>ninyo</l><r>ikaw<s n="prn"/><s n="p2"/><s n="pl"/><s n="erg"/></r></p></e>
+   <e><p><l>inyo</l><r>ikaw<s n="prn"/><s n="p2"/><s n="pl"/><s n="obl"/></r></p></e>
+  </pardef>
+
+  <pardef n="/siya__prn">
+   <e><p><l>siya</l><r>siya<s n="prn"/><s n="p3"/><s n="sg"/><s n="abs"/></r></p></e>
+   <e><p><l>niya</l><r>siya<s n="prn"/><s n="p3"/><s n="sg"/><s n="erg"/></r></p></e>
+   <e><p><l>kaniya</l><r>siya<s n="prn"/><s n="p3"/><s n="sg"/><s n="obl"/></r></p></e>
+
+   <e><p><l>sila</l><r>siya<s n="prn"/><s n="p3"/><s n="pl"/><s n="abs"/></r></p></e>
+   <e><p><l>nila</l><r>siya<s n="prn"/><s n="p3"/><s n="pl"/><s n="erg"/></r></p></e>
+   <e><p><l>kanila</l><r>siya<s n="prn"/><s n="p3"/><s n="pl"/><s n="obl"/></r></p></e>
+  </pardef>
+
 
   <!-- Determiners -->
 
@@ -133,6 +167,8 @@
   <!-- Pronouns -->
 
   <e lm="ako"><i/><par n="/ako__prn"/></e>
+  <e lm="ikaw"><i/><par n="/ikaw__prn"/></e>
+  <e lm="siya"><i/><par n="/siya__prn"/></e>
 
   <!-- Determiners -->
 
