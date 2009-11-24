@@ -9,7 +9,6 @@
   <sdef n="adj"    c="Adjective"/>
   <sdef n="det"    c="Determiner"/>
   <sdef n="pr"     c="Preposition"/>
-  <sdef n="part"   c="Particle"/>
   <sdef n="cnjcoo" c="Co-ordinating conjunction"/>
   <sdef n="cnjsub" c="Sub-ordinating conjunction"/>
   <sdef n="prn"    c="Pronoun"/>
@@ -22,6 +21,8 @@
   <sdef n="p1x"/>
   <sdef n="p2"/>
   <sdef n="p3"/>
+
+  <sdef n="neg"    c="Negative"/>
 
   <sdef n="dem"    c="Demonstrative"/>
 
@@ -40,6 +41,9 @@
   <!-- Particles -->
   <pardef n="mga__part">
    <e><p><l/><r><s n="part"/></r></p></e> 
+  </pardef>
+  <pardef n="hindi__part">
+   <e><p><l/><r><s n="part"/><s n="neg"/></r></p></e> 
   </pardef>
  
   <!-- Prepositions -->
@@ -180,6 +184,10 @@
   <e lm="lamang"><i>lamang</i><par n="mga__part"/></e>
   <e lm="man"><i>man</i><par n="mga__part"/></e>
   <e lm="din"><i>din</i><par n="mga__part"/></e>
+
+  <e lm="hindi"><i>hindi</i><par n="hindi__part"/></e>
+  <e lm="wala"><i>wala</i><par n="hindi__part"/></e>
+  <e lm="huwag"><i>huwag</i><par n="hindi__part"/></e>
 
 
   <!-- Conjunctions -->
