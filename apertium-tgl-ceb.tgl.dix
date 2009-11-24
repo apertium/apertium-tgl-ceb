@@ -15,6 +15,7 @@
 
   <sdef n="al"     c="Other"/>
   <sdef n="top"    c="Toponym"/>
+  <sdef n="ant"    c="Anthroponym"/>
 
   <sdef n="p1"/>
   <sdef n="p1i"/>
@@ -164,6 +165,10 @@
 
   <pardef n="Israel__np">
    <e><p><l/><r><s n="np"/><s n="top"/><s n="sg"/></r></p></e> 
+  </pardef>
+
+  <pardef n="David__np">
+   <e><p><l/><r><s n="np"/><s n="ant"/><s n="sg"/></r></p></e> 
   </pardef>
 
 
@@ -2124,6 +2129,30 @@
   <e lm="Eden"><i>Eden</i><par n="Israel__np"/></e>
   <e lm="Arabya"><i>Arabya</i><par n="Israel__np"/></e>
   <e lm="Asya"><i>Asya</i><par n="Israel__np"/></e>
+  <e lm="Jerusalem"><i>Jerusalem</i><par n="Israel__np"/></e>
+  <e lm="Babilonia"><i>Babilonia</i><par n="Israel__np"/></e>
+  <e lm="Jordan"><i>Jordan</i><par n="Israel__np"/></e>
+  <e lm="Jerico"><i>Jerico</i><par n="Israel__np"/></e>
+  <e lm="Libano"><i>Libano</i><par n="Israel__np"/></e>
+  <e lm="Hebron"><i>Hebron</i><par n="Israel__np"/></e>
+
+  <e lm="David"><i>David</i><par n="David__np"/></e>
+  <e lm="Moises"><i>Moises</i><par n="David__np"/></e>
+  <e lm="Saul"><i>Saul</i><par n="David__np"/></e>
+  <e lm="Jacob"><i>Jacob</i><par n="David__np"/></e>
+  <e lm="Aaron"><i>Aaron</i><par n="David__np"/></e>
+  <e lm="Salomon"><i>Salomon</i><par n="David__np"/></e>
+  <e lm="Jose"><i>Jose</i><par n="David__np"/></e>
+  <e lm="Abraham"><i>Abraham</i><par n="David__np"/></e>
+  <e lm="Benjamin"><i>Benjamin</i><par n="David__np"/></e>
+  <e lm="Pablo"><i>Pablo</i><par n="David__np"/></e>
+  <e lm="Pedro"><i>Pedro</i><par n="David__np"/></e>
+  <e lm="Samuel"><i>Samuel</i><par n="David__np"/></e>
+  <e lm="Juan"><i>Juan</i><par n="David__np"/></e>
+  <e lm="Isaac"><i>Isaac</i><par n="David__np"/></e>
+  <e lm="Jonathan"><i>Jonathan</i><par n="David__np"/></e>
+  <e lm="Simon"><i>Simon</i><par n="David__np"/></e>
+  <e lm="Daniel"><i>Daniel</i><par n="David__np"/></e>
 
   <!-- Adjectives -->
 
