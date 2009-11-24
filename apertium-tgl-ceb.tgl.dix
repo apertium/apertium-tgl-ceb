@@ -9,6 +9,7 @@
   <sdef n="adj"    c="Adjective"/>
   <sdef n="det"    c="Determiner"/>
   <sdef n="pr"     c="Preposition"/>
+  <sdef n="part"   c="Particle"/>
   <sdef n="cnjcoo" c="Co-ordinating conjunction"/>
   <sdef n="cnjsub" c="Sub-ordinating conjunction"/>
   <sdef n="prn"    c="Pronoun"/>
@@ -2689,5 +2690,8 @@
   <e lm="kalbo"><i>kalbo</i><par n="malinis__adj"/></e>
 
   <e lm="Griego"><i>Griego</i><par n="malinis__adj"/></e>
+ </section>
+ <section id="apostrophe" type="preblank">
+   <e lm="'y"><p><l>'y</l><r>ay<s n="part"/></r></p></e>
  </section>
 </dictionary>
