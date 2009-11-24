@@ -5,6 +5,7 @@
 /apertium-tgl-ceb.tgl.dix -text
 dev/ceb.hitparade.txt -text
 dev/coverage-test.sh -text
+dev/hitparade.sh -text
 dev/scream-filengnor.py -text
 dev/scream-splitout.py -text
 dev/scream-xmlout-nouns.py -text
