@@ -8,7 +8,7 @@ cat $CORPUS | apertium-destxt | lt-proc $ANALYSER | apertium-retxt | sed 's/\$\W
 
 KNOWN=`cat $TEMPFILE | grep -v '*' | wc -l`;
 TOTAL=`cat $TEMPFILE | wc -l`;
-COVERAGE=`calc $KNOWN / $TOTAL \* 100 |  sed 's/\t//g' | sed 's/ //g' |  cut -f2 -d'~' | head -c 5`;
+COVERAGE=`echo "scale=1; $KNOWN / $TOTAL * 100" | bc`;
 
 echo "Total: "$TOTAL", Known: "$KNOWN" ("$COVERAGE"%)";
 
