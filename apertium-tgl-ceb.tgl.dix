@@ -152,7 +152,10 @@
   <pardef n="malinis__adj">
    <e><p><l/><r><s n="adj"/></r></p></e> 
   </pardef>
-
+  
+  <pardef n="madali__adv">
+   <e><p><l/><r><s n="adj"/></r></p></e>
+  </pardef>
   <!-- Nouns -->
 
   <pardef n="aso__n"> <!-- dog /-->
@@ -2154,6 +2157,115 @@
   <e lm="Simon"><i>Simon</i><par n="David__np"/></e>
   <e lm="Daniel"><i>Daniel</i><par n="David__np"/></e>
 
+  <!-- Adverbs -->
+  <e lm="agad"><i>agad</i><par n="madali__adv"/></e>
+  <e lm="bago"><i>bago</i><par n="madali__adv"/></e>
+  <e lm="bahagya"><i>bahagya</i><par n="madali__adv"/></e>
+  <e lm="baka"><i>baka</i><par n="madali__adv"/></e>
+  <e lm="bakit"><i>bakit</i><par n="madali__adv"/></e>
+  <e lm="bigla"><i>bigla</i><par n="madali__adv"/></e>
+  <e lm="dati"><i>dati</i><par n="madali__adv"/></e>
+  <e lm="di"><i>di</i><par n="madali__adv"/></e>
+  <e lm="dili"><i>dili</i><par n="madali__adv"/></e>
+  <e lm="din"><i>din</i><par n="madali__adv"/></e>
+  <e lm="dito"><i>dito</i><par n="madali__adv"/></e>
+  <e lm="diyan"><i>diyan</i><par n="madali__adv"/></e>
+  <e lm="doon"><i>doon</i><par n="madali__adv"/></e>
+  <e lm="ganap"><i>ganap</i><par n="madali__adv"/></e>
+  <e lm="ganiyan"><i>ganiyan</i><par n="madali__adv"/></e>
+  <e lm="ganyan"><i>ganyan</i><par n="madali__adv"/></e>
+  <e lm="halos"><i>halos</i><par n="madali__adv"/></e>
+  <e lm="higit"><i>higit</i><par n="madali__adv"/></e>
+  <e lm="hindi"><i>hindi</i><par n="madali__adv"/></e>
+  <e lm="huli"><i>huli</i><par n="madali__adv"/></e>
+  <e lm="ibayo"><i>ibayo</i><par n="madali__adv"/></e>
+  <e lm="isa-isa"><i>isa-isa</i><par n="madali__adv"/></e>
+  <e lm="itaas"><i>itaas</i><par n="madali__adv"/></e>
+  <e lm="kagabi"><i>kagabi</i><par n="madali__adv"/></e>
+  <e lm="kahapon"><i>kahapon</i><par n="madali__adv"/></e>
+  <e lm="kailan"><i>kailan</i><par n="madali__adv"/></e>
+  <e lm="karampatan"><i>karampatan</i><par n="madali__adv"/></e>
+  <e lm="karaniwan"><i>karaniwan</i><par n="madali__adv"/></e>
+  <e lm="kinikilala"><i>kinikilala</i><par n="madali__adv"/></e>
+  <e lm="kusa"><i>kusa</i><par n="madali__adv"/></e>
+  <e lm="laban"><i>laban</i><par n="madali__adv"/></e>
+  <e lm="labis"><i>labis</i><par n="madali__adv"/></e>
+  <e lm="lagi"><i>lagi</i><par n="madali__adv"/></e>
+  <e lm="lalo"><i>lalo</i><par n="madali__adv"/></e>
+  <e lm="lamang"><i>lamang</i><par n="madali__adv"/></e>
+  <e lm="maayos"><i>maayos</i><par n="madali__adv"/></e>
+  <e lm="mabait"><i>mabait</i><par n="madali__adv"/></e>
+  <e lm="mabuti"><i>mabuti</i><par n="madali__adv"/></e>
+  <e lm="madalang"><i>madalang</i><par n="madali__adv"/></e>
+  <e lm="madalas"><i>madalas</i><par n="madali__adv"/></e>
+  <e lm="madali"><i>madali</i><par n="madali__adv"/></e>
+  <e lm="maganda"><i>maganda</i><par n="madali__adv"/></e>
+  <e lm="magdamag"><i>magdamag</i><par n="madali__adv"/></e>
+  <e lm="mahigit"><i>mahigit</i><par n="madali__adv"/></e>
+  <e lm="mahimbing"><i>mahimbing</i><par n="madali__adv"/></e>
+  <e lm="mahinahon"><i>mahinahon</i><par n="madali__adv"/></e>
+  <e lm="makalawa"><i>makalawa</i><par n="madali__adv"/></e>
+  <e lm="makapal"><i>makapal</i><par n="madali__adv"/></e>
+  <e lm="makapito"><i>makapito</i><par n="madali__adv"/></e>
+  <e lm="malaki"><i>malaki</i><par n="madali__adv"/></e>
+  <e lm="malaon"><i>malaon</i><par n="madali__adv"/></e>
+  <e lm="malapit"><i>malapit</i><par n="madali__adv"/></e>
+  <e lm="maligaya"><i>maligaya</i><par n="madali__adv"/></e>
+  <e lm="maliwanag"><i>maliwanag</i><par n="madali__adv"/></e>
+  <e lm="malubha"><i>malubha</i><par n="madali__adv"/></e>
+  <e lm="man"><i>man</i><par n="madali__adv"/></e>
+  <e lm="mana"><i>mana</i><par n="madali__adv"/></e>
+  <e lm="mandin"><i>mandin</i><par n="madali__adv"/></e>
+  <e lm="marahan"><i>marahan</i><par n="madali__adv"/></e>
+  <e lm="marahil"><i>marahil</i><par n="madali__adv"/></e>
+  <e lm="masaya"><i>masaya</i><par n="madali__adv"/></e>
+  <e lm="matagal"><i>matagal</i><par n="madali__adv"/></e>
+  <e lm="minsan"><i>minsan</i><par n="madali__adv"/></e>
+  <e lm="mukha"><i>mukha</i><par n="madali__adv"/></e>
+  <e lm="muli"><i>muli</i><par n="madali__adv"/></e>
+  <e lm="muna"><i>muna</i><par n="madali__adv"/></e>
+  <e lm="na"><i>na</i><par n="madali__adv"/></e>
+  <e lm="nagliliyab"><i>nagliliyab</i><par n="madali__adv"/></e>
+  <e lm="nakasakay"><i>nakasakay</i><par n="madali__adv"/></e>
+  <e lm="naman"><i>naman</i><par n="madali__adv"/></e>
+  <e lm="nang"><i>nang</i><par n="madali__adv"/></e>
+  <e lm="nga"><i>nga</i><par n="madali__adv"/></e>
+  <e lm="ngayon"><i>ngayon</i><par n="madali__adv"/></e>
+  <e lm="noo'y"><i>noo'y</i><par n="madali__adv"/></e>
+  <e lm="noon"><i>noon</i><par n="madali__adv"/></e>
+  <e lm="pa"><i>pa</i><par n="madali__adv"/></e>
+  <e lm="paano"><i>paano</i><par n="madali__adv"/></e>
+  <e lm="pagdaka"><i>pagdaka</i><par n="madali__adv"/></e>
+  <e lm="pagdaka'y"><i>pagdaka'y</i><par n="madali__adv"/></e>
+  <e lm="pagkamatay"><i>pagkamatay</i><par n="madali__adv"/></e>
+  <e lm="pagkaraan"><i>pagkaraan</i><par n="madali__adv"/></e>
+  <e lm="pagkatanggap"><i>pagkatanggap</i><par n="madali__adv"/></e>
+  <e lm="pahalang"><i>pahalang</i><par n="madali__adv"/></e>
+  <e lm="paimbabaw"><i>paimbabaw</i><par n="madali__adv"/></e>
+  <e lm="paitaas"><i>paitaas</i><par n="madali__adv"/></e>
+  <e lm="palagi"><i>palagi</i><par n="madali__adv"/></e>
+  <e lm="palusong"><i>palusong</i><par n="madali__adv"/></e>
+  <e lm="papaano"><i>papaano</i><par n="madali__adv"/></e>
+  <e lm="para"><i>para</i><par n="madali__adv"/></e>
+  <e lm="parati"><i>parati</i><par n="madali__adv"/></e>
+  <e lm="pati"><i>pati</i><par n="madali__adv"/></e>
+  <e lm="patiwarik"><i>patiwarik</i><par n="madali__adv"/></e>
+  <e lm="patuloy"><i>patuloy</i><par n="madali__adv"/></e>
+  <e lm="pino"><i>pino</i><par n="madali__adv"/></e>
+  <e lm="rin"><i>rin</i><par n="madali__adv"/></e>
+  <e lm="riyan"><i>riyan</i><par n="madali__adv"/></e>
+  <e lm="roon"><i>roon</i><par n="madali__adv"/></e>
+  <e lm="saan"><i>saan</i><par n="madali__adv"/></e>
+  <e lm="saka"><i>saka</i><par n="madali__adv"/></e>
+  <e lm="sapat"><i>sapat</i><par n="madali__adv"/></e>
+  <e lm="talaga"><i>talaga</i><par n="madali__adv"/></e>
+  <e lm="tila"><i>tila</i><par n="madali__adv"/></e>
+  <e lm="tinatanggap"><i>tinatanggap</i><par n="madali__adv"/></e>
+  <e lm="totoo"><i>totoo</i><par n="madali__adv"/></e>
+  <e lm="uli"><i>uli</i><par n="madali__adv"/></e>
+  <e lm="una"><i>una</i><par n="madali__adv"/></e>
+  <e lm="una-una"><i>una-una</i><par n="madali__adv"/></e>
+  <e lm="wakasan"><i>wakasan</i><par n="madali__adv"/></e>
   <!-- Adjectives -->
 
   <e lm="malabis"><i>malabis</i><par n="malinis__adj"/></e>
