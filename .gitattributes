@@ -33,6 +33,8 @@ dev/splitout/tgl.filengnor-output.txt -text
 dev/splitout/tgl.filengnor-output.v.txt -text
 dev/test_phrases.txt -text
 dev/tgl.hitparade.txt -text
+dev/verbs/HfstTester.py -text
 dev/verbs/Makefile -text
+dev/verbs/lexcGen.py -text
 dev/verbs/tgl.lexc -text
 dev/verbs/tgl.twol -text
