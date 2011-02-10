@@ -37,4 +37,5 @@ dev/verbs/HfstTester.py -text
 dev/verbs/Makefile -text
 dev/verbs/lexcGen.py -text
 dev/verbs/tgl.lexc -text
+dev/verbs/tgl.relabel -text
 dev/verbs/tgl.twol -text
