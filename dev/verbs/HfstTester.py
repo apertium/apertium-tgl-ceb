@@ -74,6 +74,8 @@ class HfstTester:
 			description="Test HFST dictionaries for consistency.",
 			epilog="Will run all tests from file by default."
 			)
+		argparser.add_argument("-c", "--colour", dest="colour", action="store_true",
+			help="Colours the output")
 		argparser.add_argument("-s", "--surface", dest="surface", action="store_true",
 			help="Dump output by surface form")
 		argparser.add_argument("-l", "--lexical", dest="lexical", action="store_true",
@@ -84,8 +86,6 @@ class HfstTester:
 			help="Suppresses failures to make finding passes easier")
 		argparser.add_argument("-t", "--test", dest="test", 
 			nargs=1, required=False, help="Which test to run (Default: all)")
-		argparser.add_argument("-c", "--colour", dest="colour", action="store_true",
-			help="Colours the output")
 		argparser.add_argument("test_file", nargs=1, help="YAML/JSON file with test rules")
 		self.args = argparser.parse_args()
 		
