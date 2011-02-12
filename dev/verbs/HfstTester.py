@@ -152,7 +152,7 @@ class HfstTester:
 								print self.c("[PASS] %s:%s <= %s" % (lex, lex, sform))
 							self.count[c][0] += 1
 						else:
-							if not self.args.fail_pass:
+							if not self.args.hide_fail:
 								print self.c("[FAIL] %s:%s <= %s" % (lex, l, sform))
 							self.count[c][1] += 1
 		print self.c("Test %d - Passes: %d, Fails: %d, Total: %d\n" % (c, self.count[c][0],
