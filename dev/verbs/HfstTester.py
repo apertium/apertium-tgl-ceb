@@ -15,6 +15,13 @@ if sys.hexversion < 0x02070000:
 from subprocess import *
 import os, argparse, json, yaml
 
+def s2l(thing):
+	if type(thing) in (str, unicode):
+		return [thing]
+	elif type(thing) is list:
+		return thing
+	return None
+
 def colourise(string, opt=None):
 	def red(s="", r="\033[m"):
 		return "\033[0;31m%s%s" % (s, r) 
@@ -125,7 +132,7 @@ class HfstTester:
 		print self.c("-"*len(title), 1)
 
 		for l in self.tests[input].keys():
-			sforms = self.tests[input][l]
+			sforms = s2l(self.tests[input][l])
 			lexors = []
 			for s in sforms:
 				for i in self.tests[input].keys():
@@ -161,7 +168,7 @@ class HfstTester:
 		print self.c("-"*len(title), 1)
 
 		for l in self.tests[input].keys():
-			sforms = self.tests[input][l]
+			sforms = s2l(self.tests[input][l])
 			p1 = Popen(['echo', l], stdout=PIPE)
 			p2 = Popen(['hfst-lookup', self.gen], stdin=p1.stdout, stdout=PIPE)
 			p1.stdout.close()
