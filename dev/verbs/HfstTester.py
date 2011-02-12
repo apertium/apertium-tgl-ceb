@@ -71,8 +71,10 @@ class HfstTester:
 			help="Dump output by surface form")
 		argparser.add_argument("-l", "--lexical", dest="lexical", action="store_true",
 			help="Dump output by lexical form")
-		argparser.add_argument("-f", "--show-fail", dest="hide_pass", action="store_true",
+		argparser.add_argument("-f", "--no-pass", dest="hide_pass", action="store_true",
 			help="Suppresses passes to make finding failures easier")
+		argparser.add_argument("-p", "--no-fail", dest="hide_fail", action="store_true",
+			help="Suppresses failures to make finding passes easier")
 		argparser.add_argument("-t", "--test", dest="test", 
 			nargs=1, required=False, help="Which test to run (Default: all)")
 		argparser.add_argument("-c", "--colour", dest="colour", action="store_true",
@@ -143,7 +145,8 @@ class HfstTester:
 								print self.c("[PASS] %s:%s <= %s" % (lex, lex, sform))
 							self.count[c][0] += 1
 						else:
-							print self.c("[FAIL] %s:%s <= %s" % (lex, l, sform))
+							if not self.args.fail_pass:
+								print self.c("[FAIL] %s:%s <= %s" % (lex, l, sform))
 							self.count[c][1] += 1
 		print self.c("Test %d - Passes: %d, Fails: %d, Total: %d\n" % (c, self.count[c][0],
 			self.count[c][1], self.count[c][0] + self.count[c][1]), 2)
@@ -171,7 +174,8 @@ class HfstTester:
 							print self.c("[PASS] %s => %s:%s" % (l, r, r) )
 						self.count[c][0] += 1
 					else:
-						print self.c("[FAIL] %s => %s:%s" % (l, sforms, r))
+						if not self.args.hide_fail:
+							print self.c("[FAIL] %s => %s:%s" % (l, sforms, r))
 						self.count[c][1] += 1
 		print self.c("Test %d - Passes: %d, Fails: %d, Total: %d\n" % (c, self.count[c][0], 
 			self.count[c][1], self.count[c][0] + self.count[c][1]), 2)
