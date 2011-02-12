@@ -136,7 +136,7 @@ class HfstTester:
 			lexors = []
 			for s in sforms:
 				for i in self.tests[input].keys():
-					if s in self.tests[input][i]:
+					if s in s2l(self.tests[input][i]):
 						lexors.append(i)
 
 			for sform in sforms:
