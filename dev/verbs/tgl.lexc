@@ -115,7 +115,7 @@ LEXICON Infixes
 @D.CV@@P.INFX.in@:in	PartStems ;
 						PartStems ;
 
-LEXICON PartStems 
+LEXICON PartStems
 @R.ALPH.b@ili	RegSuffixes ;
 @R.ALPH.l@inis	RegSuffixes ;
 @R.ALPH.p@ili	RegSuffixes ;
