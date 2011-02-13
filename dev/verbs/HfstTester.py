@@ -6,6 +6,7 @@
 
 # TODO:
 # - create Rules: {} for JSON, to make parsing more dynamic 
+# - make WHY it failed much more clear.
 
 import sys
 if sys.hexversion < 0x02070000:
@@ -18,8 +19,18 @@ import os, argparse, json, yaml
 def s2l(thing):
 	if type(thing) in (str, unicode):
 		return [thing]
-	elif type(thing) is list:
+	elif type(thing) in (list, tuple):
 		return thing
+	return None
+
+def l2s(thing):
+	if type(thing) in (str, unicode):
+		return thing
+	elif type(thing) in (list, tuple):
+		if len(thing) > 1:
+			return thing #bail out!
+		else:
+			return thing[0]
 	return None
 
 def colourise(string, opt=None):
@@ -149,11 +160,11 @@ class HfstTester:
 						lex = i.split('\t')[1].strip()
 						if lex in lexors:
 							if not self.args.hide_pass:
-								print self.c("[PASS] %s:%s <= %s" % (lex, lex, sform))
+								print self.c("[PASS] %s => %s" % (sform, lex))
 							self.count[c][0] += 1
 						else:
 							if not self.args.hide_fail:
-								print self.c("[FAIL] %s:%s <= %s" % (lex, l, sform))
+								print self.c("[FAIL] %s => Expected: %s, Got: %s" % (sform, l, lex))
 							self.count[c][1] += 1
 		print self.c("Test %d - Passes: %d, Fails: %d, Total: %d\n" % (c, self.count[c][0],
 			self.count[c][1], self.count[c][0] + self.count[c][1]), 2)
@@ -178,11 +189,11 @@ class HfstTester:
 					r = i.split('\t')[1].strip()
 					if (r in sforms):
 						if not self.args.hide_pass:
-							print self.c("[PASS] %s => %s:%s" % (l, r, r) )
+							print self.c("[PASS] %s => %s" % (l, r) )
 						self.count[c][0] += 1
 					else:
 						if not self.args.hide_fail:
-							print self.c("[FAIL] %s => %s:%s" % (l, sforms, r))
+							print self.c("[FAIL] %s => Expected: %s, Got: %s" % (l, l2s(sforms), r))
 						self.count[c][1] += 1
 		print self.c("Test %d - Passes: %d, Fails: %d, Total: %d\n" % (c, self.count[c][0], 
 			self.count[c][1], self.count[c][0] + self.count[c][1]), 2)
