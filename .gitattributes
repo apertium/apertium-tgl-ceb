@@ -35,8 +35,12 @@ dev/test_phrases.txt -text
 dev/tgl.hitparade.txt -text
 dev/verbs/HfstTester.py -text
 dev/verbs/Makefile -text
+dev/verbs/ceb-tests.yaml -text
+dev/verbs/ceb.lexc -text
+dev/verbs/ceb.twol -text
 dev/verbs/lexcGen.py -text
 dev/verbs/tests.json -text
+dev/verbs/tgl-tests.yaml -text
 dev/verbs/tgl.lexc -text
 dev/verbs/tgl.relabel -text
 dev/verbs/tgl.twol -text

@@ -1,0 +1,75 @@
+Config:
+  Gen: ceb-gen.fst
+  Morph: ceb-morph.fst
+
+Tests:
+  Verb - kamao:
+    kamao+V+Inf: kamao
+    kamao+V+Act+Temp+Pres: [mikamao, nikamao]
+    kamao+V+Act+Temp+Past: [mikamao, nikamao]
+    kamao+V+Act+Temp+Fut: mokamao
+    kamao+V+Act+Dur+Pres: [nagakamao, nagkamao]
+    kamao+V+Act+Dur+Past: [nagakamao, nagkamao]
+    kamao+V+Act+Dur+Fut: [magakamao, magkamao]
+    kamao+V+Act+TempDur+Com: pagkamao
+    kamao+V+Act+Stat+Pres: nakamao
+    kamao+V+Act+Stat+Past: nakamao
+    kamao+V+Act+Stat+Fut: makamao
+    kamao+V+Act+Stat+Com: [kakamao, pagkakamao]
+    kamao+V+Act+Abi+Pres: nakakamao
+    kamao+V+Act+Abi+Past: nakakamao
+    kamao+V+Act+Abi+Fut: makakamao
+    kamao+V+Act+Pl+Pres: nangkamao
+    kamao+V+Act+Pl+Past: nangkamao
+    kamao+V+Act+Pl+Fut: mangkamao
+    kamao+V+DirP+TempDur+Pres: gikamao
+    kamao+V+DirP+TempDur+Past: gikamao
+    kamao+V+DirP+TempDur+Fut: kamaohon
+    kamao+V+DirP+TempDur+Com: kamaoha
+    kamao+V+DirP+Abi+Pres: nakamao
+    kamao+V+DirP+Abi+Past: nakamao
+    kamao+V+DirP+Abi+Fut: makamao
+    kamao+V+IndP+TempDur+Pres: gikamaohan
+    kamao+V+IndP+TempDur+Past: gikamaohan
+    kamao+V+IndP+TempDur+Fut: kamaohan
+    kamao+V+IndP+TempDur+Com: kamaohi
+    kamao+V+Inst+TempDur+Pres: gikamao
+    kamao+V+Inst+TempDur+Past: gikamao
+    kamao+V+Inst+TempDur+Fut: ikamao
+    kamao+V+Inst+TempDur+Com: ikamao
+
+  Verb - hilak:
+    hilak+V+Inf: hilak
+    hilak+V+Act+Temp+Pres: [mihilak, nihilak]
+    hilak+V+Act+Temp+Past: [mihilak, nihilak]
+    hilak+V+Act+Temp+Fut: mohilak
+    hilak+V+Act+Dur+Pres: [nagahilak, naghilak]
+    hilak+V+Act+Dur+Past: [nagahilak, naghilak]
+    hilak+V+Act+Dur+Fut: [magahilak, maghilak]
+    hilak+V+Act+TempDur+Com: paghilak
+    hilak+V+Act+Stat+Pres: nahilak
+    hilak+V+Act+Stat+Past: nahilak
+    hilak+V+Act+Stat+Fut: mahilak
+    hilak+V+Act+Stat+Com: [kahilak, pagkahilak]
+    hilak+V+Act+Abi+Pres: nakahilak
+    hilak+V+Act+Abi+Past: nakahilak
+    hilak+V+Act+Abi+Fut: makahilak
+    hilak+V+Act+Pl+Pres: nanghilak
+    hilak+V+Act+Pl+Past: nanghilak
+    hilak+V+Act+Pl+Fut: manghilak
+    hilak+V+DirP+TempDur+Pres: gihilak
+    hilak+V+DirP+TempDur+Past: gihilak
+    hilak+V+DirP+TempDur+Fut: hilakon
+    hilak+V+DirP+TempDur+Com: hilaka
+    hilak+V+DirP+Abi+Pres: nahilak
+    hilak+V+DirP+Abi+Past: nahilak
+    hilak+V+DirP+Abi+Fut: mahilak
+    hilak+V+IndP+TempDur+Pres: gihilakan
+    hilak+V+IndP+TempDur+Past: gihilakan
+    hilak+V+IndP+TempDur+Fut: hilakan
+    hilak+V+IndP+TempDur+Com: hilaki
+    hilak+V+Inst+TempDur+Pres: gihilak
+    hilak+V+Inst+TempDur+Past: gihilak
+    hilak+V+Inst+TempDur+Fut: ihilak
+    hilak+V+Inst+TempDur+Com: ihilak
+

@@ -1,0 +1,93 @@
+Multichar_Symbols  +V +Inf !+Cont +Prog +Comp +Imp
+                   !+Obj1 +Obj2 +Obj3 
+                   !+Act1 +Act2 +Act3 +Act4 
+                   !+Loc +Ben +Ins +Rea 
+                   !+Dir +Recip ! unused at the moment
+                   %>
+				   +Act +DirP +IndP +Inst
+				   +Temp +Dur +TempDur +Stat +Abi +Pl
+				   +Pre +Past +Fut +Com
+
+                   @P.PREF.ni@		@R.PREF.ni@
+                   @P.PREF.mi@		@R.PREF.mi@
+                   @P.PREF.mo@		@R.PREF.mo@
+                   @P.PREF.nag@		@R.PREF.nag@
+                   @P.PREF.mag@		@R.PREF.mag@
+                   @P.PREF.pag@		@R.PREF.pag@
+                   @P.PREF.na@		@R.PREF.na@
+                   @P.PREF.ma@		@R.PREF.ma@
+                   @P.PREF.ka@		@R.PREF.ka@
+                   @P.PREF.naka@	@R.PREF.naka@
+                   @P.PREF.maka@	@R.PREF.maka@
+                   @P.PREF.nang@	@R.PREF.nang@
+                   @P.PREF.mang@	@R.PREF.mang@
+                   @P.PREF.gi@		@R.PREF.gi@
+                   @P.PREF.na@		@R.PREF.na@
+                   @P.PREF.ma@		@R.PREF.ma@
+                   @P.PREF.i@		@R.PREF.i@
+
+                   @D.PREF@
+
+LEXICON Root
+Prefixes ;
+Stems ;
+
+LEXICON Prefixes
+@P.PREF.mi@:mi%>		Stems ;
+@P.PREF.mi@:ni%>		Stems ;
+@P.PREF.mo@:mo%>		Stems ;
+@P.PREF.nag@:naga%>		Stems ;
+@P.PREF.nag@:nag%>		Stems ;
+@P.PREF.mag@:maga%>		Stems ;
+@P.PREF.mag@:mag%>		Stems ;
+@P.PREF.pag@:pag%>		Stems ;
+@P.PREF.na@:na%>		Stems ;
+@P.PREF.ma@:ma%>		Stems ;
+@P.PREF.ka@:ka%>		Stems ;
+@P.PREF.ka@:pagka%>		Stems ;
+@P.PREF.naka@:naka%>	Stems ;
+@P.PREF.maka@:maka%>	Stems ;
+@P.PREF.nang@:nang%>	Stems ;
+@P.PREF.mang@:mang%>	Stems ;
+@P.PREF.gi@:gi%>		Stems ;
+@P.PREF.i@:i%>			Stems ;
+
+LEXICON Stems
+kamao		RegSuffixes ; ! to know a skill
+tuo			RegSuffixes ; ! to believe
+hilak		RegSuffixes ; ! to cry
+
+LEXICON RegSuffixes
+@D.PREF@+V+Inf:						# ;
+@R.PREF.mi@+V+Act+Temp+Pres:		# ;
+@R.PREF.mi@+V+Act+Temp+Past:		# ;
+@R.PREF.mo@+V+Act+Temp+Fut:			# ;
+@R.PREF.nag@+V+Act+Dur+Pres:		# ;
+@R.PREF.nag@+V+Act+Dur+Past:		# ;
+@R.PREF.mag@+V+Act+Dur+Fut:			# ;
+@R.PREF.pag@+V+Act+TempDur+Com:		# ;
+@R.PREF.na@+V+Act+Stat+Pres:		# ;
+@R.PREF.na@+V+Act+Stat+Past:		# ;
+@R.PREF.ma@+V+Act+Stat+Fut:			# ;
+@R.PREF.ka@+V+Act+Stat+Com:			# ;
+@R.PREF.naka@+V+Act+Abi+Pres:		# ;
+@R.PREF.naka@+V+Act+Abi+Past:		# ;
+@R.PREF.maka@+V+Act+Abi+Fut:		# ;
+@R.PREF.nang@+V+Act+Pl+Pres:		# ;
+@R.PREF.nang@+V+Act+Pl+Past:		# ;
+@R.PREF.mang@+V+Act+Pl+Fut:			# ;
+@R.PREF.gi@+V+DirP+TempDur+Pres:	# ;
+@R.PREF.gi@+V+DirP+TempDur+Past:	# ;
+@D.PREF@+V+DirP+TempDur+Fut:Non	# ;
+@D.PREF@+V+DirP+TempDur+Com:Na		# ;
+@R.PREF.na@+V+DirP+Abi+Pres:		# ;
+@R.PREF.na@+V+DirP+Abi+Past:		# ;
+@R.PREF.ma@+V+DirP+Abi+Fut:			# ;
+@R.PREF.gi@+V+IndP+TempDur+Pres:Nan	# ;
+@R.PREF.gi@+V+IndP+TempDur+Past:Nan	# ;
+@D.PREF@+V+IndP+TempDur+Fut:Nan	# ;
+@D.PREF@+V+IndP+TempDur+Com:Ni		# ;
+@R.PREF.gi@+V+Inst+TempDur+Pres:	# ;
+@R.PREF.gi@+V+Inst+TempDur+Past:	# ;
+@R.PREF.i@+V+Inst+TempDur+Fut:		# ;
+@R.PREF.i@+V+Inst+TempDur+Com:		# ;
