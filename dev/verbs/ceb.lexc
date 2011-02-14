@@ -78,14 +78,14 @@ LEXICON RegSuffixes
 @R.PREF.mang@+V+Act+Pl+Fut:			# ;
 @R.PREF.gi@+V+DirP+TempDur+Pres:	# ;
 @R.PREF.gi@+V+DirP+TempDur+Past:	# ;
-@D.PREF@+V+DirP+TempDur+Fut:Non	# ;
+@D.PREF@+V+DirP+TempDur+Fut:Non		# ;
 @D.PREF@+V+DirP+TempDur+Com:Na		# ;
 @R.PREF.na@+V+DirP+Abi+Pres:		# ;
 @R.PREF.na@+V+DirP+Abi+Past:		# ;
 @R.PREF.ma@+V+DirP+Abi+Fut:			# ;
 @R.PREF.gi@+V+IndP+TempDur+Pres:Nan	# ;
 @R.PREF.gi@+V+IndP+TempDur+Past:Nan	# ;
-@D.PREF@+V+IndP+TempDur+Fut:Nan	# ;
+@D.PREF@+V+IndP+TempDur+Fut:Nan		# ;
 @D.PREF@+V+IndP+TempDur+Com:Ni		# ;
 @R.PREF.gi@+V+Inst+TempDur+Pres:	# ;
 @R.PREF.gi@+V+Inst+TempDur+Past:	# ;

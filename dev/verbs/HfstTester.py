@@ -112,6 +112,10 @@ class HfstTester:
 				sys.exit(1)
 		self.gen = f["Config"]["Gen"]
 		self.morph = f["Config"]["Morph"]
+		for i in (self.gen, self.morph):
+			if not os.path.isfile(i):
+				print "File %s does not exist."
+				sys.exit(2)
 		self.tests = f["Tests"]
 		self.run_tests(self.args.test)
 	
