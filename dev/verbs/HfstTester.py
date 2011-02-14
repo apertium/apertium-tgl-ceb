@@ -9,7 +9,7 @@
 # - make WHY it failed much more clear.
 
 import sys
-if sys.hexversion < 0x02070000:
+#if sys.hexversion < 0x02070000:
 	print "You must use Python 2.7 or greater."
 	sys.exit(255)
 

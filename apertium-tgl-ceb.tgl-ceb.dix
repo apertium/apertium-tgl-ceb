@@ -9,6 +9,7 @@
      <sdef n="cnjsub"/>
      <sdef n="sg"/>
      <sdef n="pl"/>
+     <sdef n="pr"/>
    </sdefs>
 
    <section id="main" type="standard">

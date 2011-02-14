@@ -6,6 +6,9 @@
   <sdef n="part"/>
   <sdef n="cnjcoo"/>
   <sdef n="cnjsub"/>
+  <sdef n="np"/>
+  <sdef n="al"/>
+  <sdef n="det"/>
   <sdef n="pr"/>
   <sdef n="sg"/>
   <sdef n="pl"/>
