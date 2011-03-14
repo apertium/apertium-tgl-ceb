@@ -1,4 +1,5 @@
-#!/usr/bin/python
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 # HfstTester.py 1.0 - Copyright (c) 2011 
 # Brendan Molloy <brendan@bbqsrc.net>
@@ -9,7 +10,7 @@
 # - make WHY it failed much more clear.
 
 import sys
-#if sys.hexversion < 0x02070000:
+if sys.hexversion < 0x02070000:
 	print "You must use Python 2.7 or greater."
 	sys.exit(255)
 
@@ -114,7 +115,7 @@ class HfstTester:
 		self.morph = f["Config"]["Morph"]
 		for i in (self.gen, self.morph):
 			if not os.path.isfile(i):
-				print "File %s does not exist."
+				print "File %s does not exist." % i
 				sys.exit(2)
 		self.tests = f["Tests"]
 		self.run_tests(self.args.test)
@@ -158,7 +159,7 @@ class HfstTester:
 				p1 = Popen(['echo', sform], stdout=PIPE)
 				p2 = Popen(['hfst-lookup', self.morph], stdin=p1.stdout, stdout=PIPE)
 				p1.stdout.close()
-				res = p2.communicate()[0].split('\n')
+				res = p2.communicate()[0].decode("utf-8").split('\n')
 				for i in res:
 					if i.strip() != '':
 						lex = i.split('\t')[1].strip()
@@ -187,7 +188,7 @@ class HfstTester:
 			p1 = Popen(['echo', l], stdout=PIPE)
 			p2 = Popen(['hfst-lookup', self.gen], stdin=p1.stdout, stdout=PIPE)
 			p1.stdout.close()
-			res = p2.communicate()[0].split('\n')
+			res = p2.communicate()[0].decode("utf-8").split('\n')
 			for i in res:
 				if i.strip() != '':
 					r = i.split('\t')[1].strip()
