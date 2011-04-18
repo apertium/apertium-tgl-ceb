@@ -1,6 +1,7 @@
 Config:
-  Gen: ceb-gen.fst
-  Morph: ceb-morph.fst
+  hfst:
+    Gen: ceb-gen.fst
+    Morph: ceb-morph.fst
 
 Tests:
   Verb - kamao:

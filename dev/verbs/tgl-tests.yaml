@@ -1,6 +1,7 @@
 Config:
-  Gen: tgl-gen.fst
-  Morph: tgl-morph.fst
+  hfst:
+    Gen: tgl-gen.fst
+    Morph: tgl-morph.fst
 
 Tests:
   Verb - bili:
