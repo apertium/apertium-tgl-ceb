@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# HfstTester.py 1.6 - Copyright (c) 2011 
+# HfstTester.py 1.9999.1 - Copyright (c) 2011 
 # Brendan Molloy <brendan@bbqsrc.net>
 # Børre Gaup <boerre@skolelinux.no>
 # Licensed under Creative Commons Zero (CC0)
@@ -15,9 +15,7 @@ import sys
 try:
 	import argparse
 except:
-	print "Looks like you're on an older Python version."
-	print "Please do `sudo easy_install argparse`."
-	sys.exit(255)
+	raise ImportError("argparse missing.\nPlease do `sudo easy_install argparse`.")
 
 try:
 	from collections import OrderedDict
@@ -25,16 +23,13 @@ except:
 	try:
 		from ordereddict import OrderedDict
 	except:
-		print "Looks like you're on an older Python version."
-		print "Please do `sudo easy_install ordereddict`."
-		
+		raise ImportError("OrderedDict missing.\nPlease do `sudo easy_install ordereddict`.")		
 try:
 	import yaml
 except:
-	print "Looks like you're missing the YAML parser."
-	print "Please do `sudo easy_install pyyaml`."
-	sys.exit(255)
+	raise ImportError("yaml missing.\nPlease do `sudo easy_install pyyaml`.")
 
+from multiprocessing import Process, Manager
 from subprocess import *
 import os, traceback
 
@@ -150,8 +145,10 @@ class HfstTester(object):
 
 		@staticmethod
 		def result(title, test, counts):
+			p = counts["Pass"]
+			f = counts["Fail"]
 			text = "Test %d - Passes: %d, Fails: %d, Total: %d\n"
-			print colourise(text % (test, counts[0], counts[1], counts[0] + counts[1]), 2).encode('utf-8')
+			print colourise(text % (test, p, f, p+f), 2).encode('utf-8')
 
 	class CompactOutput(AllOutput):
 		@staticmethod
@@ -168,11 +165,13 @@ class HfstTester(object):
 
 		@staticmethod
 		def result(title, test, counts):
-			if counts[1] > 0:
-				print colourise("[FAIL] %s" % title)
+			p = counts["Pass"]
+			f = counts["Fail"]
+			out = "%s %d/%d/%d" % (title, p, f, p+f)
+			if counts["Fail"] > 0:
+				print colourise("[FAIL] %s" % out)
 			else:
-				print colourise("[PASS] %s" % title)
-
+				print colourise("[PASS] %s" % out)
 			
 	def __init__(self):
 		self.fails = 0
@@ -213,9 +212,9 @@ class HfstTester(object):
 		argparser.add_argument("-p", "--hide-passes",
 			dest="hide_pass", action="store_true",
 			help="Suppresses failures to make finding passes easier")
-		argparser.add_argument("-x", "--xerox",
-			dest="xerox", action="store_true", required=False, 
-			help="Use the Xerox `lookup` tool (default is `hfst-lookup`)")
+		argparser.add_argument("-S", "--section", default=["hfst"],
+			dest="section", nargs=1, required=False, 
+			help="The section to be used for testing (default is `hfst`)")
 		argparser.add_argument("-t", "--test",
 			dest="test", nargs=1, required=False,
 			help="""Which test to run (Default: all). TEST = test ID, e.g.
@@ -229,35 +228,28 @@ class HfstTester(object):
 
 	def load_config(self):
 		global colourise
-		try:
-			f = yaml.load(open(self.args.test_file[0]), OrderedDictYAMLLoader)
-		except:
-			traceback.print_exc()
-			print "File not valid YAML. Bailing out."
-			print "Check your YAML for spurious hidden tabs."
-			sys.exit(255)
+		f = yaml.load(open(self.args.test_file[0]), OrderedDictYAMLLoader)
 		
-		if self.args.xerox:
-			if self.args.verbose:
-				print "Testing Xerox FST dictionaries"
-			configkey = "xerox"
-			self.program = "lookup"
-		else:
-			if self.args.verbose:
-				print "Testing Helsinki FST dictionaries"
-			configkey = "hfst"
-			self.program = "hfst-lookup"
-
+		section = self.args.section[0]
+		if not section in f["Config"]:
+			raise AttributeError("'%s' not found in Config of test file." % section)
+		
+		self.program = f["Config"][section].get("App", "hfst-lookup")
 		if not whereis(self.program):
-			print "Cannot find %s. Check $PATH." % self.program
-			sys.exit(255)
+			raise IOError("Cannot find `%s`. Check $PATH." % self.program)
 
-		self.gen = f["Config"][configkey]["Gen"]
-		self.morph = f["Config"][configkey]["Morph"]
+		if self.args.verbose:
+			print("`%s` will be used for parsing dictionaries." % self.program)
+
+		self.gen = f["Config"][section].get("Gen", None)
+		self.morph = f["Config"][section].get("Morph", None)
+	
+		if self.gen == self.morph == None:
+			raise AttributeError("One of Gen or Morph must be configured.")
+
 		for i in (self.gen, self.morph):
-			if not os.path.isfile(i):
-				print "File %s does not exist." % i
-				sys.exit(255)	
+			if i and not os.path.isfile(i):
+				raise IOError("File %s does not exist." % i)
 		
 		self.tests = f["Tests"]
 		for test in self.tests:
@@ -280,94 +272,138 @@ class HfstTester(object):
 		if self.args.surface == self.args.lexical == False:
 			self.args.surface = self.args.lexical = True
 		
+
 		if(input != None):
+			self.parse_fsts(self.tests[input[0]])
 			if self.args.lexical: self.run_test(input[0], True)
 			if self.args.surface: self.run_test(input[0], False)
 		
 		else:
-			for t in self.tests.keys():
+			tests = {}
+			for t in self.tests:
+				tests.update(self.tests[t])
+			self.parse_fsts(tests)
+			for t in self.tests:
 				if self.args.lexical: self.run_test(t, True)
 				if self.args.surface: self.run_test(t, False)
 		
 		if self.args.verbose:
 			self.out.final_result(self)
 
+	def parse_fsts(self, tests):
+		invtests = invert_dict(tests)
+		manager = Manager()
+		self.results = manager.dict({"gen": {}, "morph": {}})
+
+		def parser(self, d, f, tests):
+			keys = tests.keys()
+			app = Popen([self.program, f], stdin=PIPE, stdout=PIPE, stderr=PIPE)
+			args = '\n'.join(keys) + '\n'
+			app.stdin.write(args.encode('utf-8'))
+			res = app.communicate()[0].decode('utf-8').split('\n\n')
+			self.results[d] = self.parse_fst_output(res)
+		
+		gen = Process(target=parser, args=(self, "gen", self.gen, tests))
+		gen.daemon = True
+		gen.start()
+		if self.args.verbose:
+			print("Generating...")
+		
+		morph = Process(target=parser, args=(self, "morph", self.morph, invtests))
+		morph.daemon = True
+		morph.start()
+		if self.args.verbose:
+			print("Morphing...")
+
+		gen.join()
+		morph.join()
+
+		if self.args.verbose:
+			print("Done!")
+		
 	def run_test(self, input, is_lexical):
 		if is_lexical:
 			desc = "Lexical/Generation"
-			f = self.gen
-			tests = invert_dict(self.tests[input])
-			invtests = self.tests[input]
-
-		else: #surface
-			desc = "Surface/Analysis"
-			f = self.morph
+			f = "gen"
 			tests = self.tests[input]
 			invtests = invert_dict(self.tests[input])
 
+		else: #surface
+			desc = "Surface/Analysis"
+			f = "morph"
+			tests = invert_dict(self.tests[input])
+			invtests = self.tests[input]
+
+		if not f:
+			return
+
 		c = len(self.count)
-		self.count.append([0, 0])
+		self.count.append({"Pass":0, "Fail":0})
 		
 		title = "Test %d: %s (%s)" % (c, input, desc)
 		self.out.title(title)
 
 		for test, forms in tests.iteritems():
-			checks = []
-			for form in forms:
-				checks += invtests[form]
-			checks = set(checks)
+			expected_results = set(forms)
+			actual_results = set(self.results[f][test])
 
-			app = Popen([self.program, f], stdin=PIPE, stdout=PIPE, stderr=PIPE)
-			args = '\n'.join(forms) + '\n'
-			app.stdin.write(args.encode('utf-8'))
-			res = app.communicate()[0].split('\n\n')
+			invalid = set()
+			missing = set()
+			success = set()
+			passed = False
 
-			for num, form in enumerate(forms):
-				results = self.parse_app_output(res[num].decode('utf-8'))
-				invalid = set()
-				passed = False
-				for check in checks: # for each "facit" analysis
-					if check in results: # We have a positive hit
-						if not self.args.hide_pass:
-							self.out.success(form, check)				
-						self.count[c][0] += 1
-						results.remove(check)
-						passed = True
-					else:
-						invalid.add(check)
+			for form in expected_results:
+				if not form in actual_results:
+					invalid.add(form.encode('utf-8'))
 			
-				if not self.args.hide_fail:
-					if len(invalid) > 0:
-						self.out.failure(form, "Invalid test item", invalid)
-						self.count[c][1] += len(invalid)
-					if len(results) > 0 and (not self.args.ignore_analyses or not passed):
-						self.out.failure(form, "Unexpected output", results)
-						self.count[c][1] += len(results)
+			for form in actual_results:
+				if not form in expected_results:
+					missing.add(form.encode('utf-8'))
+		
+			for form in expected_results:
+				if not form in (invalid | missing):
+					passed = True
+					success.add(form.encode('utf-8'))
+					self.count[c]["Pass"] += 1
+					if not self.args.hide_pass:
+						self.out.success(test, form)				
+			
+			if not self.args.hide_fail:
+				if len(invalid) > 0:
+					self.out.failure(test.encode('utf-8'), "Invalid test item", invalid)
+					self.count[c]["Fail"] += len(invalid)
+				if len(missing) > 0 and (not self.args.ignore_analyses or not passed):
+					self.out.failure(test.encode('utf-8'), "Unexpected output", missing)
+					self.count[c]["Fail"] += len(missing)
 
 		self.out.result(title, c, self.count[c])
 		
-		self.passes += self.count[c][0]
-		self.fails += self.count[c][1]
-
-	def parse_app_output(self, res):
-		"Receive a unicode string"
-		ret = set()
-		if type(res) == unicode:
-			res = res.replace('\r\n','\n').replace('\r','\n')
-			for i in res.split('\n'):
+		self.passes += self.count[c]["Pass"]
+		self.fails += self.count[c]["Fail"]
+	
+	def parse_fst_output(self, fst):
+		parsed = {}
+		for item in fst:
+			res = item.replace('\r\n','\n').replace('\r','\n').split('\n')
+			for i in res:
 				if i.strip() != '':
-					results = i.split('\t')	
+					results = i.split('\t')
+					key = results[0].strip()
+					if not key in parsed:
+						parsed[key] = set()
 					# This test is needed because xfst's lookup
 					# sometimes output strings like
 					# bearkoe\tbearkoe\t+N+Sg+Nom, instead of the expected
 					# bearkoe\tbearkoe+N+Sg+Nom
 					if len(results) > 2 and results[2][0] == '+':
-						lex = results[1].strip() + results[2].strip()
+						parsed[key].add(results[1].strip() + results[2].strip())
 					else:
-						lex = results[1].strip()
-					ret.add(lex)
-		return ret
+						parsed[key].add(results[1].strip())
+		return parsed
 
 if __name__ == "__main__":
-	hfst = HfstTester()
-	hfst.start()
+	try:
+		hfst = HfstTester()
+		hfst.start()
+	except KeyboardInterrupt:
+		pass
