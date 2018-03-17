@@ -45,3 +45,8 @@ dev/verbs/tgl-tests.yaml -text
 dev/verbs/tgl.lexc -text
 dev/verbs/tgl.relabel -text
 dev/verbs/tgl.twol -text
+*.dix linguist-language=XML linguist-detectable=true
+*.lrx linguist-language=XML linguist-detectable=true
+*.lsx linguist-language=XML linguist-detectable=true
+*.tsx linguist-language=XML linguist-detectable=true
+*.t[[:digit:]]x linguist-language=XML linguist-detectable=true
